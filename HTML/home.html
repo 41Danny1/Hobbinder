@@ -5,11 +5,63 @@
             <meta charset="UTF-8">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
             <link rel="stylesheet" type="text/css" href="main.css">
-            <link rel="stylesheet" type="text/css" href="followerMain.css">
+            <!-- <link rel="stylesheet" type="text/css" href="followerMain.css"> -->
+            <link rel="stylesheet" type="text/css" href="hobbinder.css">
             <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,400|Yellowtail" rel="stylesheet">
+            <script src="https://kit.fontawesome.com/3e471b317e.js" crossorigin="anonymous"></script>
            <!-- <script src="profile_script.js"></script> -->
             <!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
             <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+            <style>
+                    .lastPost{
+	  text-align: right;
+      }
+      .previewImg{
+	  background-color: #EEEEEE;
+	  width: 48px;
+	  height: 48px;
+	  float: left;
+	  margin-right: 15px;
+      }
+      a.postLinks{
+	  color: #212529;
+      }
+      a.postLinks:hover{
+	  color: #444444;
+	  text-decoration: none;
+      }
+      .postRow{
+	  padding-top: 15px;
+          padding-bottom: 15px;
+          border: 2px solid #DDDDDD;
+          margin: 15px 0;
+          background-color: white;
+          border-radius: 10px;
+      }
+      /* .postRow:hover{
+	  background-color: #EEEEEE;
+      } */
+      .noPadding{
+	  padding: 0;
+      }
+      .previewToolbar{
+	  margin: 5px 0;
+	  padding: 0 15px;
+	  margin-left: 45px;
+	  background-color: #212529;
+	  border-radius: 10px 0 0 10px;
+      }
+      .previewToolbar > a{
+	  color: white;
+      }
+      .previewToolbar > a:hover{
+	  text-decoration: none;
+      }
+      .previewBox{
+	  padding: 0 15px;
+	  margin-left: 30px;
+      }
+            </style>
         </head>
 
 <body>
@@ -54,82 +106,185 @@
 
         </div>
 
-        <div class="rela-block container"><div class="rela-block profile-card"><ul class="mdc-list">
-                <!-- <div class="container"> -->
-                  <div class="top_follow">
-                    
-                  </div>
-                  <div id="follower_table">
-                    <div class="row">
-                      <div class="col-1">
-                          <a href="" ><img src="profile.png" alt="profile_image" width="50" height="50"></a>
-                      </div>
-                      <div class="col-8">
-                       <a href=""><p class="user_name">Carolyn Oliver</p></a>
-                       <p class="user_id">@Carolyn_Oliver</p> 
-                       <p class="user_description">user discription here</p>
-                       <!-- <img src="dog.jpg" alt="dog"> -->
-                      </div>  
-                    </div>
-    
-                    <div class="row">
-                      <div class="col-2">
-                          <a href="" ><img src="profile.png" alt="profile_image" width="120px" height="120px"></a>
-                      </div>
-                      <div class="col-8">
-                       <a href=""><p class="user_name">Carolyn Oliver</p></a>
-                       <p class="user_id">@Carolyn_Oliver</p>
-                       <p class="user_description">user discription here </p>
-                      </div>  
-                    </div>
-    
-                    <div class="row">
-                      <div class="col-2">
-                          <a href="" ><img src="profile.png" alt="profile_image" width="120px" height="120px"></a>
-                      </div>
-                      <div class="col-8">
-                       <a href=""><p class="user_name">Carolyn Oliver</p></a>
-                       <p class="user_id">@Carolyn_Oliver</p>
-                       <p class="user_description">user discription here </p>
-                      </div>  
-                    </div>
-    
-                    <div class="row">
-                      <div class="col-2">
-                          <a href="" ><img src="profile.png" alt="profile_image" width="120px" height="120px"></a>
-                      </div>
-                      <div class="col-8">
-                       <a href=""><p class="user_name">Carolyn Oliver</p></a>
-                       <p class="user_id">@Carolyn_Oliver</p>
-                       <p class="user_description">user discription here </p>
-                      </div>  
-                    </div>
-    
-                    <div class="row">
-                      <div class="col-2">
-                          <a href="" ><img src="profile.png" alt="profile_image" width="120px" height="120px"></a>
-                      </div>
-                      <div class="col-8">
-                       <a href=""><p class="user_name">Carolyn Oliver</p></a>
-                       <p class="user_id">@Carolyn_Oliver</p>
-                       <p class="user_description">user discription here </p>
-                      </div>  
-                    </div>
-    
-                    <div class="row">
-                      <div class="col-2">
-                          <a href="" ><img src="profile.png" alt="profile_image" width="120px" height="120px"></a>
-                      </div>
-                      <div class="col-8">
-                       <a href=""><p class="user_name">Carolyn Oliver</p></a>
-                       <p class="user_id">@Carolyn_Oliver</p>
-                       <p class="user_description">user discription here </p>
-                      </div>  
-                    </div>
-               
-                  </div>
-                  <!-- <div class="rela-block 
-            profile-name-container"> -->
+        
+            <div class="container">
+                    <div class="row"> <!-- The posts -->
+	<div class="col-12">
+	  <div class="row postRow"> <!-- A post -->
+	    <div class="col-12">
+	      <div class="row"> 
+		<div class="col-sm-8">
+		  <div>
+		    <div class="previewImg">
+		      IMG
+		    </div>
+		    <a href="#" class="postLinks"><b>
+			POST TITLE 
+		    </b></a>
+		    +N <!-- # likes -->
+		    <br>
+		    <a href="#" class="postLinks"><i class="fas fa-chevron-right"></i></a>
+		    <a href="#" class="postLinks">
+		      AUTHOR
+		    </a>
+		    - DATE, TIME
+		  </div>
+		</div>
+		<div class="col-sm-4 lastPost">
+		  Last post: DATE, TIME<br>
+		  By: <a href="#" class="postLinks">USER</a>
+		</div>
+	      </div>
+	    </div>
+	  </div> <!-- End of A post -->
+
+	  <div class="row postRow"> <!-- A post -->
+	    <div class="col-12">
+	      <div class="row"> 
+		<div class="col-sm-8">
+		  <div>
+		    <div class="previewImg">
+		      IMG
+		    </div>
+		    <a href="#" class="postLinks"><b>
+			POST TITLE 
+		    </b></a>
+		    +N <!-- # likes -->
+		    <br>
+		    <a href="#" class="postLinks"><i class="fas fa-chevron-down"></i></a>
+		    <a href="#" class="postLinks">
+		      AUTHOR
+		    </a>
+		    - DATE, TIME
+		  </div>
+		</div>
+		<div class="col-sm-4 lastPost">
+		  Last post: DATE, TIME<br>
+		  By: <a href="#" class="postLinks">USER</a>
+		</div>
+	      </div>
+	      <div class="row noPadding"> <!-- Preview content -->
+		<div class="col-12 noPadding">
+		  <div class="previewToolbar"> <!-- Preview toolbar -->
+		    <a href="#" class=""><i class="far fa-thumbs-up"></i> Like</a>&nbsp&nbsp
+		    <a href="#" class=""><i class="far fa-bookmark"></i> Save</a>&nbsp&nbsp
+		    <a href="#" class=""><i class="fas fa-share"></i> Share</a>&nbsp&nbsp
+		    <a href="#" class=""><i class="fas fa-flag"></i> Report</a>
+		  </div> <!-- End of preview toolbar -->
+		  <div class="previewBox">
+		    <div style="width: 200px; height: 200px; background-color: #f45200; color: white; text-align: center; padding-top: 50px;">
+		      IMG PREVIEW
+		    </div>
+		  </div>
+		</div>
+	      </div> <!-- End of preview content -->
+	    </div>
+	  </div> <!-- End of A post -->
+
+<div class="spacer"></div>
+
+	  <div class="row postRow"> <!-- A post -->
+	    <div class="col-12">
+	      <div class="row"> 
+		<div class="col-sm-8">
+		  <div>
+		    <div class="previewImg">
+		      IMG
+		    </div>
+		    <a href="#" class="postLinks"><b>
+			POST TITLE 
+		    </b></a>
+		    +N <!-- # likes -->
+		    <br>
+		    <a href="#" class="postLinks"><i class="fas fa-chevron-down"></i></a>
+		    <a href="#" class="postLinks">
+		      AUTHOR
+		    </a>
+		    - DATE, TIME
+		  </div>
+		</div>
+		<div class="col-sm-4 lastPost">
+		  Last post: DATE, TIME<br>
+		  By: <a href="#" class="postLinks">USER</a>
+		</div>
+	      </div>
+	      <div class="row noPadding"> <!-- Preview content -->
+		<div class="col-12 noPadding">
+		  <div class="previewToolbar"> <!-- Preview toolbar -->
+		    <a href="#" class=""><i class="far fa-thumbs-up"></i> Like</a>&nbsp&nbsp
+		    <a href="#" class=""><i class="far fa-bookmark"></i> Save</a>&nbsp&nbsp
+		    <a href="#" class=""><i class="fas fa-share"></i> Share</a>&nbsp&nbsp
+		    <a href="#" class=""><i class="fas fa-flag"></i> Report</a>
+		  </div> <!-- End of preview toolbar -->
+		  <div class="previewBox">
+		    <div style="width: 100%; padding: 5px; background-color: #EEEEEE;">
+		      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		    </div>
+		  </div>
+		</div>
+	      </div> <!-- End of preview content -->
+	    </div>
+	  </div> <!-- End of A post -->
+
+	  <div class="row postRow"> <!-- A post -->
+	    <div class="col-12">
+	      <div class="row"> 
+		<div class="col-sm-8">
+		  <div>
+		    <div class="previewImg">
+		      IMG
+		    </div>
+		    <a href="#" class="postLinks"><b>
+			POST TITLE 
+		    </b></a>
+		    +N <!-- # likes -->
+		    <br>
+		    <a href="#" class="postLinks"><i class="fas fa-chevron-right"></i></a>
+		    <a href="#" class="postLinks">
+		      AUTHOR
+		    </a>
+		    - DATE, TIME
+		  </div>
+		</div>
+		<div class="col-sm-4 lastPost">
+		  Last post: DATE, TIME<br>
+		  By: <a href="#" class="postLinks">USER</a>
+		</div>
+	      </div>
+	    </div>
+	  </div> <!-- End of A post -->
+
+	  <div class="row postRow"> <!-- A post -->
+	    <div class="col-12">
+	      <div class="row"> 
+		<div class="col-sm-8">
+		  <div>
+		    <div class="previewImg">
+		      IMG
+		    </div>
+		    <a href="#" class="postLinks"><b>
+			POST TITLE 
+		    </b></a>
+		    +N <!-- # likes -->
+		    <br>
+		    <a href="#" class="postLinks"><i class="fas fa-chevron-right"></i></a>
+		    <a href="#" class="postLinks">
+		      AUTHOR
+		    </a>
+		    - DATE, TIME
+		  </div>
+		</div>
+		<div class="col-sm-4 lastPost">
+		  Last post: DATE, TIME<br>
+		  By: <a href="#" class="postLinks">USER</a>
+		</div>
+	      </div>
+	    </div>
+	  </div> <!-- End of A post -->
+
+	</div>
+      </div>  <!-- End of the posts -->
+            </div>
                
 
 
