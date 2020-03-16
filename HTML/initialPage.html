@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Initial Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="startPage.css" rel="stylesheet" />
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="col-sm-1">
+      <img src="CupoJava.png" class="img-circle" alt="CupoJava" style="width:80%">
+    </div> 
+    <div class="col-sm-9">
+      <h1>Welcome To Hobbinder</h1>
+    </div> 
+    <div class="col-sm-1">
+      <div class="collapse navbar-collapse" id="myNavbar"></div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="Login.html">LOGIN</a></li>
+        </ul>
+      </div>
+    </div> 
+    <div class="col-sm-1">
+      <div class="collapse navbar-collapse" id="myNavbar"></div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="Register.html">REGISTER</a></li>
+        </ul>
+      </div>
+    </div> 
+    
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="groups.jpg" alt="Group" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Share</h3>
+          <p>Share your hobbies.</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="running.jpg" alt="Running" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Grow</h3>
+          <p>Grow a community.</p>
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="friends.jpg" alt="Friends" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Inspire</h3>
+          <p>Inspire others.</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <p>	&#169; 2020 Hobbinder <a href="https://www.hobbinder.ca" data-toggle="tooltip" title="Visit Hobbinder">www.hobbinder.ca</a></p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
