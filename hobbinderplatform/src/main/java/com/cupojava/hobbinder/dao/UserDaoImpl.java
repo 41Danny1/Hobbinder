@@ -1,4 +1,4 @@
-package com.user.wongi5.dao;
+package com.cupojava.hobbinder.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,11 +11,10 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.user.wongi5.model.Course;
-
+import com.cupojava.hobbinder.model.User;
 
 @Repository
-public class CourseDaoImpl implements CourseDao {
+public class UserDaoImpl implements UserDao {
 
 	NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 	
@@ -25,17 +24,17 @@ public class CourseDaoImpl implements CourseDao {
 	}
 	
 	//@Override
-	public Course findByCode(String code) {
+	public User findByName(String name) {
 		
 		Map<String, Object> params = new HashMap<String, Object>();
-        params.put("code", code);
+        params.put("name", name);
         
-		String sql = "SELECT * FROM courses WHERE code=:code";
+		String sql = "SELECT * FROM users WHERE name=:name";
 		
-        Course result = namedParameterJdbcTemplate.queryForObject(
+        User result = namedParameterJdbcTemplate.queryForObject(
                     sql,
                     params,
-                    new CourseMapper());
+                    new UserMapper());
                     
         //new BeanPropertyRowMapper(Customer.class));
         
@@ -44,26 +43,26 @@ public class CourseDaoImpl implements CourseDao {
 	}
 
 	//@Override
-	public List<Course> findAll() {
+	public List<User> findAll() {
 		
 		Map<String, Object> params = new HashMap<String, Object>();
 		
-		String sql = "SELECT * FROM courses";
+		String sql = "SELECT * FROM users";
 		
-        List<Course> result = namedParameterJdbcTemplate.query(sql, params, new CourseMapper());
+        List<User> result = namedParameterJdbcTemplate.query(sql, params, new UserMapper());
         
         return result;
         
 	}
 
-	private static final class CourseMapper implements RowMapper<Course> {
+	private static final class UserMapper implements RowMapper<User> {
 
-		public Course mapRow(ResultSet rs, int rowNum) throws SQLException {
-			Course course = new Course();
+		public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+			User user = new User();
 //			user.setId(rs.getInt("id"));
-			course.setCode(rs.getString("code"));
-			course.setName(rs.getString("name"));
-			return course;
+			user.setUserName(rs.getString("name"));
+			user.setEmail(rs.getString("email"));
+			return user;
 		}
 	}
 

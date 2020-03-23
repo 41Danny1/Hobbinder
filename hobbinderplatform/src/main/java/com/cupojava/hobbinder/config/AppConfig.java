@@ -1,4 +1,4 @@
-package com.user.wongi5.config;
+package com.cupojava.hobbinder.config;
 
 import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
@@ -28,7 +28,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = { "com.user.wongi5" })
+@ComponentScan(basePackages = { "com.cupojava.hobbinder" })
 public class AppConfig implements WebMvcConfigurer {
 
 	@Bean

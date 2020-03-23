@@ -1,4 +1,4 @@
-package com.user.wongi5.dao;
+package com.cupojava.hobbinder.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,8 +11,8 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.user.wongi5.model.Course;
-import com.user.wongi5.model.Student;
+import com.cupojava.hobbinder.model.Course;
+import com.cupojava.hobbinder.model.Student;
 
 @Repository
 public class StudentDaoImpl implements StudentDao {

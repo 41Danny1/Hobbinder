@@ -1,4 +1,4 @@
-package com.user.wongi5.model;
+package com.cupojava.hobbinder.model;
 
 public class Course {
 	private String code;

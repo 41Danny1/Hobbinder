@@ -1,4 +1,4 @@
-package com.user.wongi5.config.db;
+package com.cupojava.hobbinder.config.db;
 
 import java.sql.SQLException;
 

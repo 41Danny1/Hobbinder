@@ -1,4 +1,4 @@
-package com.user.wongi5.controller;
+package com.cupojava.hobbinder.controller;
 
 import javax.servlet.http.HttpSession;
 
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import com.user.wongi5.dao.StudentDao;
-import com.user.wongi5.model.LoginInfo;
-import com.user.wongi5.model.Student;
+import com.cupojava.hobbinder.dao.StudentDao;
+import com.cupojava.hobbinder.model.LoginInfo;
+import com.cupojava.hobbinder.model.Student;
 
 @Controller
 @SessionAttributes("student")
