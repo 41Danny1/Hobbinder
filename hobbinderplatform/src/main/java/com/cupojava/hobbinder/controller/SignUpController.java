@@ -1,4 +1,4 @@
-package com.user.wongi5.controller;
+package com.cupojava.hobbinder.controller;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.user.wongi5.dao.UserDao;
-import com.user.wongi5.model.User;
+import com.cupojava.hobbinder.dao.UserDao;
+import com.cupojava.hobbinder.model.User;
 
 @Controller
 public class SignUpController {

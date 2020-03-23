@@ -1,8 +1,8 @@
-package com.user.wongi5.dao;
+package com.cupojava.hobbinder.dao;
 
 import java.util.List;
 
-import com.user.wongi5.model.User;
+import com.cupojava.hobbinder.model.User;
 
  
 public interface UserDao {

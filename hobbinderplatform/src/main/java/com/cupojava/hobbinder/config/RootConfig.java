@@ -1,4 +1,4 @@
-package com.user.wongi5.config;
+package com.cupojava.hobbinder.config;
 
 import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
-@ComponentScan({ "com.user.wongi5" })
+@ComponentScan({ "com.cupojava.hobbinder" })
 @Configuration
 public class RootConfig {
 

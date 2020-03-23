@@ -1,4 +1,4 @@
-package com.user.wongi5.controller;
+package com.cupojava.hobbinder.controller;
 
 import java.util.List;
 
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import com.user.wongi5.dao.CourseDao;
-import com.user.wongi5.dao.StudentDao;
-import com.user.wongi5.model.Course;
-import com.user.wongi5.model.Student;
+import com.cupojava.hobbinder.dao.CourseDao;
+import com.cupojava.hobbinder.dao.StudentDao;
+import com.cupojava.hobbinder.model.Course;
+import com.cupojava.hobbinder.model.Student;
 
 @Controller
 @SessionAttributes("student")

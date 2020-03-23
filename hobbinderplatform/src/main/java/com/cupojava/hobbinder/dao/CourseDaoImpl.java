@@ -1,4 +1,4 @@
-package com.user.wongi5.dao;
+package com.cupojava.hobbinder.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,10 +11,11 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.user.wongi5.model.User;
+import com.cupojava.hobbinder.model.Course;
+
 
 @Repository
-public class UserDaoImpl implements UserDao {
+public class CourseDaoImpl implements CourseDao {
 
 	NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 	
@@ -24,17 +25,17 @@ public class UserDaoImpl implements UserDao {
 	}
 	
 	//@Override
-	public User findByName(String name) {
+	public Course findByCode(String code) {
 		
 		Map<String, Object> params = new HashMap<String, Object>();
-        params.put("name", name);
+        params.put("code", code);
         
-		String sql = "SELECT * FROM users WHERE name=:name";
+		String sql = "SELECT * FROM courses WHERE code=:code";
 		
-        User result = namedParameterJdbcTemplate.queryForObject(
+        Course result = namedParameterJdbcTemplate.queryForObject(
                     sql,
                     params,
-                    new UserMapper());
+                    new CourseMapper());
                     
         //new BeanPropertyRowMapper(Customer.class));
         
@@ -43,26 +44,26 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	//@Override
-	public List<User> findAll() {
+	public List<Course> findAll() {
 		
 		Map<String, Object> params = new HashMap<String, Object>();
 		
-		String sql = "SELECT * FROM users";
+		String sql = "SELECT * FROM courses";
 		
-        List<User> result = namedParameterJdbcTemplate.query(sql, params, new UserMapper());
+        List<Course> result = namedParameterJdbcTemplate.query(sql, params, new CourseMapper());
         
         return result;
         
 	}
 
-	private static final class UserMapper implements RowMapper<User> {
+	private static final class CourseMapper implements RowMapper<Course> {
 
-		public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-			User user = new User();
+		public Course mapRow(ResultSet rs, int rowNum) throws SQLException {
+			Course course = new Course();
 //			user.setId(rs.getInt("id"));
-			user.setUserName(rs.getString("name"));
-			user.setEmail(rs.getString("email"));
-			return user;
+			course.setCode(rs.getString("code"));
+			course.setName(rs.getString("name"));
+			return course;
 		}
 	}
 

@@ -1,4 +1,4 @@
-package com.user.wongi5.config;
+package com.cupojava.hobbinder.config;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
