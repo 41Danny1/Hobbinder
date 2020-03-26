@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="<c:url value="/resources/css/hobbinder.css" />"
 	rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="resources/css/main.css">
     <script src="https://kit.fontawesome.com/3e471b317e.js" crossorigin="anonymous"></script>
     
     <style>
@@ -68,34 +69,63 @@
   </head>
   <body>
     
-    <div class="headerBar"> <!-- Header -->
-      <div class="container">
-	<div class="row">
-
-	  <div class="col-sm-6">
-	    <a href="#" class="noDecor">
-	      <div class="headerIcon" style="float: left; background-color: white;"></div>
-	      <div class="headerTitle">
-		&nbsp&nbspHobbinder
+      <div class="overlay">
+	  <div class="abs-center overlay-card">
+              <div class="close">X</div>
+	      <div class="floated overlay-image">
+		  <div class="abs-center post-image"></div>
 	      </div>
-	    </a>
+              <div class="floated overlay-desc">
+		  <div class="rela-block desc-title"></div>
+		  <div class="rela-block desc-author"></div>
+		  <div class="rela-block desc-desc"></div>
+	      </div>
 	  </div>
-
-	  <div class="col-sm-6" style="color: white;">
-	    <div style="float:right;">
-	      <div class="headerIcon" style="float: left; background-color: orange;"></div>
-	      &nbsp&nbsp
-	      USERNAME<br>
-	      &nbsp&nbsp
-	      Online
-	    </div>
-	  </div>
-
-	</div>
       </div>
-    </div>
+      <div class="nav-bar">
+          <div class="horz-center nav-container">
+              <div class="floated logo">
+                  <a href="home.html"><font color="#f45200">Hobbinder</font></a>
+	      </div>
+              <ul class="floated nav-div nav-links">
+                  <li class="rela-inline"><a href="home.html">Home</a></li>
+                  <li class="rela-inline"><a href="">Community</a></li>
+                  <li class="rela-inline"><a href="">Events</a></li>
+                  <li class="rela-inline"><a href="profile.html">Profile</a></li>
+                  <li class="rela-inline"><a href="">About us</a></li></ul>
+              <ul class="floated nav-div"><li class="rela-inline menu-toggle"></li></ul>
+	      <div class="floated right"> <!-- Right Buttons -->
+		  <ul class="floated nav-div sign-div" style="width: auto;">
+		      <li class="rela-inline"><a href=""><font color="#f45200">Sign-Up</font></a></li>
+		      <li class="rela-inline"><a href=""><font color="#f45200">Sign-Out</font></a></li>
+		  </ul>
+		  <div class="nav-div search-container" style="padding-left: 15px;">
+                      <div class="rela-inline icon search-icon"></div>
+                      <input type="text" placeholder="Search" class="rela-inline nav-search"/>
+		  </div>
+		  <div class="menu-card">
+		      <div class="abs-center menu-background"></div>
+		      <div class="menu-content">
+			  <ul class="menu-links sub-nav-links">
+			      <li class="rela-block">Home</li>
+			      <li class="rela-block">Designers</li>
+			      <li class="rela-block">Teams</li>
+			      <li class="rela-block">Community</li><li class="rela-block">Jobs</li>
+			  </ul>
+			  <ul class="menu-links"><li class="rela-block">About</li>
+			      <li class="rela-block">Shop</li><li class="rela-block">Support</li>
+			      <li class="rela-block">Tags</li><li class="rela-block">Contact</li>
+			  </ul>
+			  <ul class="menu-links sign-links"><li class="rela-block">Sign-Up</li>
+			      <li class="rela-block">Sign-Out</li>
+			  </ul>
+		      </div>
+		  </div>
+	      </div>
+	  </div>
+      </div>
 
-    <div class="container">
+    <div class="container" style="margin-top: 15px;">
 
       <div class="row">
 	<div class="col-12" style="height: 200px; background-color: #EEEEEE; margin-top: 15px; border-bottom: solid #f45200 5px">
