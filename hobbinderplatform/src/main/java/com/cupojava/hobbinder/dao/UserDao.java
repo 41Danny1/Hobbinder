@@ -12,3 +12,4 @@ public interface UserDao {
 	List<User> findAll();
 
 }
+

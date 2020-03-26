@@ -113,7 +113,7 @@
             </div>
 
             <div class="card" style="width: 13rem; margin-top: 15px; margin-left: 25px">
-                <img src="basket.jpg" class="card-img-top" alt="...">
+                <img src="/resources/img/basket.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">BasketBall</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -122,7 +122,7 @@
             </div>
 
             <div class="card" style="width: 13rem; margin-left: 19.5px; margin-top: 15px;">
-                <img src="cooking.jpg" class="card-img-top" alt="...">
+                <img src="/resources/img/cooking.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Cooking</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -131,7 +131,7 @@
             </div>
 
             <div class="card" style="width: 13rem; margin-left: 19.5px; margin-top: 15px;">
-                <img src="sportcar.jpg" class="card-img-top" alt="...">
+                <img src="/resources/img/sportcar.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Sport Cars</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -141,7 +141,7 @@
 
             <div class="row-2">
                 <div class="card" style="width: 13rem; margin-top: 15px; margin-left: 25px">
-                    <img src="dive.jpg" class="card-img-top" alt="...">
+                    <img src="/resources/img/dive.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Diving</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -150,7 +150,7 @@
                 </div>
 
                 <div class="card" style="width: 13rem; margin-top: 15px; margin-left: 19.5px;">
-                    <img src="traveling.jpg" class="card-img-top" alt="...">
+                    <img src="/resources/img/traveling.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Traveling</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -159,7 +159,7 @@
                 </div>
 
                 <div class="card" style="width: 13rem; margin-top: 15px; margin-left: 19.5px">
-                    <img src="code.jpg" class="card-img-top" alt="...">
+                    <img src="/resources/img/code.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Coding</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

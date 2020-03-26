@@ -37,8 +37,8 @@
             </div>
             <ul class="floated nav-div nav-links">
                 <li class="rela-inline"><a href="">Home</a></li>
-                <li class="rela-inline"><a href="">Community</a></li>
-                <li class="rela-inline"><a href="">Events</a></li>
+                <li class="rela-inline"><a href="community">Community</a></li>
+                <li class="rela-inline"><a href="event">Events</a></li>
                 <li class="rela-inline"><a href="profile.html">Profile</a></li>
                 <li class="rela-inline"><a href="">About us</a>
                     <li>
