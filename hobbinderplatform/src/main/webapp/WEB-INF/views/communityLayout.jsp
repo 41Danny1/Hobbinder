@@ -30,12 +30,17 @@
 	  text-decoration: none;
       }
       .postRow{
-	  padding-top: 5px;
-	  padding-bottom: 5px;
+	  padding-top: 15px;
+          padding-bottom: 15px;
+          border: 2px solid #DDDDDD;
+          margin: 0;
+	  margin-bottom: 15px;
+          background-color: white;
+          border-radius: 10px;
       }
-      .postRow:hover{
+      /* .postRow:hover{
 	  background-color: #EEEEEE;
-      }
+      } */
       .noPadding{
 	  padding: 0;
       }
@@ -114,8 +119,8 @@
 	</div>
       </div>
 
-      <div class="row" style="border: 1px solid #DDDDDD"> <!-- The posts -->
-	<div class="col-12">
+      <div class="row" style=""> <!-- The posts -->
+	<div class="col-12 noPadding">
 
 	  <div class="row postRow"> <!-- A post -->
 	    <div class="col-12">
