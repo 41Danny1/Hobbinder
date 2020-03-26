@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="resources/css/hobbinder.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3e471b317e.js" crossorigin="anonymous"></script>
+    <title>USERNAME | Hobbinder</title>
+    <style>
+      .msgInfo{
+	  margin: 25px 0 15px 0;
+	  background-color: #EEEEEE;
+	  padding: 5px 15px;
+	  border-radius: 15px;
+      }
+      .msgContainer{
+	  border: 1px #EEEEEE solid;
+      }
+      .msgLeft{
+	  width: fit-content;
+	  background-color: #f45200;
+	  padding: 5px 15px;
+	  border-radius: 15px 15px 15px 0;
+	  color: white;
+	  clear: both;
+      }
+      .msgLeftInfo{
+	  color: #444444;
+	  clear: both;
+      }
+      .msgRight{
+	  width: fit-content;
+	  background-color: #EEEEEE;
+	  padding: 5px 15px;
+	  border-radius: 15px 15px 0 15px;
+	  color: black;
+	  float: right;
+	  clear: both;
+      }
+      .msgRightInfo{
+	  color: #444444;
+	  float: right;
+	  clear: both;
+      }
+      .hobbinderButtonOutline{
+	  color: #f45200;
+	  border-color: #f45200;
+      }
+      .hobbinderButton{
+	  color: white;
+	  background-color: #f45200;
+	  border-color: #f41500;
+      }
+      .hobbinderButton:hover{
+	  color: white;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="headerbar"> <!-- header -->
+      <div class="container">
+	<div class="row">
+
+	  <div class="col-sm-6">
+	    <a href="#" class="nodecor">
+	      <div class="headericon" style="float: left; background-color: white;"></div>
+	      <div class="headertitle">
+		&nbsp&nbsphobbinder
+	      </div>
+	    </a>
+	  </div>
+
+	  <div class="col-sm-6" style="color: white;">
+	    <div style="float:right;">
+	      <div class="headericon" style="float: left; background-color: orange;"></div>
+	      &nbsp&nbsp
+	      username<br>
+	      &nbsp&nbsp
+	      online
+	    </div>
+	  </div>
+
+	</div>
+      </div>
+    </div>
+
+    <div class="container"> <!-- Messages -->
+      <div class="row">
+	<div class="col-12 msgInfo">
+	  <div style="width: 48px; height: 48px; background-color: orange; float: left; margin-right: 15px;"></div>
+	  <div style="height: 48px; padding: 10px 0;">
+	    NAME
+	  </div>
+	</div>
+      </div>
+      <div class="row">
+	<div class="col-12">
+
+	  <div class="msgLeft">test</div>
+	  <div class="msgLeftInfo">20:18</div>
+	  <div class="msgRight">123</div>
+	  <div class="msgRightInfo">20:19</div>
+	  <div class="msgRight">Hello hello</div>
+	  <div class="msgRightInfo">20:19</div>
+	  <div class="msgLeft">test222</div>
+	  <div class="msgLeftInfo">20:20</div>
+
+	</div>
+      </div>
+      <div class="row" style="margin-top: 15px;">
+	<div class="col-12">
+	  <div class="input-group">
+	    <input type="text" class="form-control">
+	    <div class="input-group-append">
+	      <button class="btn hobbinderButton" type="button"><i class="fab fa-telegram-plane"></i>
+
+</button>
+	    </div>
+	  </div>
+	</div>
+      </div>
+    </div>
+
+  </body>
+</html>
