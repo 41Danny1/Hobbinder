@@ -9,3 +9,8 @@ INSERT INTO courses VALUES('CSIS1175', 'Introduction to Programming 1');
 INSERT INTO courses VALUES('CSIS1275', 'Introduction to Programming 2');
 
 INSERT INTO registrations VALUES('wongi5@douglascollege.ca', 'CSIS1275');
+
+INSERT INTO HOB_USERS (FirstName, LastName, UserName, Gender, Country, UserImage, UserDescription, Email, Password) VALUES('Juliana', 'Takase', 'julianatakase', 'female', 'Brazil', 'image.jpg', 'hlkjhlkjlkjlkj', 'juliana@juliana.com', '123456');
+INSERT INTO HOB_USERS (FirstName, LastName, UserName, Gender, Country, UserImage, UserDescription, Email, Password) VALUES('Marcos', 'Barros', 'marcosbarros', 'male', 'Brazil', 'image.jpg', 'hlkjhlkjlkjlkj', 'marcos@marcos.com', '123456');
+
+

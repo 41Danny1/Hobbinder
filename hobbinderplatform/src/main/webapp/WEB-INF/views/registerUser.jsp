@@ -49,39 +49,50 @@
       </div>
     </div>
 
-    <form action="/action_page.php" method="post">
+    <form action="details" method="post">
       <div class="formContainer">
       </br></br>
         <h2><font color="#f45200">Please Register</font></h2>
 
         <hr>
         <label for="firstname"><b>First Name</b></label>
-        <input type="text" placeholder="Enter your First Name"  path="firstname" required>
+        <input type="text" placeholder="Enter your First Name"  path="FirstName" name="FirstName" required>
         <br></br>
 
         <label for="lastname"><b>Last Name</b></label>
-        <input type="text" placeholder="Enter your Last Name" path="lastname" required>
+        <input type="text" placeholder="Enter your Last Name" path="LastName" name="LastName" required>
         <br></br>
 
         <label for="username"><b>Create a user name</b></label>
-        <input type="text" placeholder="Create a User Name" path="username" required>
+        <input type="text" placeholder="Create a User Name" path="UserName" name="UserName" required>
 
         
         <fieldset class="optGroup">
           <label for="gendername"><b>Gender</b></label><br></br>
             <label for="female">Female</label>
-            <input name="gender" id="female" value="yes" type="radio" path="female"/>
+            <input id="female" value="yes" type="radio" path="female" name="Gender" />
             <label for="male"> &nbsp; &nbsp;Male</label>
-            <input  name="gender" id="male" value="no" type="radio" path="male"/>
+            <input id="male" value="no" type="radio" path="male" name="Gender" />
         </fieldset>
 
+        <label for="country"><b>Country</b></label>
+        <input type="text" placeholder="Enter your Country" name="Country" path="Country" required>
+        <br></br>
+        
+        <label for="image"><b>Image</b></label>
+        <input type="text" placeholder="Enter your UserImage" name="UserImage" path="UserImage" required>
+        <br></br>
+        
+        <label for="description"><b>Description</b></label>
+        <input type="text" placeholder="Enter your Description" name="UserDescription" path="UserDescription" required>
+        <br></br>
 
         <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" path="email" required>
+        <input type="text" placeholder="Enter Email" name="Email" path="Email" required>
         <br></br>
 
         <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" path="password" required>
+        <input type="password" placeholder="Enter Password" name="Password" path="Password" required>
         <br></br>
 
         <label for="psw-repeat"><b>Repeat Password</b></label>

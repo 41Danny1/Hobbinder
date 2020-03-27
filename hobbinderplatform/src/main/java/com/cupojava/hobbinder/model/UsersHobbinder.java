@@ -1,48 +1,83 @@
 package com.cupojava.hobbinder.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+
 public class UsersHobbinder {
-	private String firstName;
-	private String lastName;
-	private String userName;
-	private String gender;
-	private String email;
-	private String password;
 	
+	private Long UserID;
+	private String FirstName;
+	private String LastName;
+	private String UserName;
+	private String Gender;
+	private String Email;
+	private String Password;
+	private String Country;
+	private String UserImage;
+	private String UserDescription;
+	
+	public Long getUserID() {
+		return UserID;
+	}
+	public void setUserID(Long userID) {
+		UserID = userID;
+	}
 	public String getFirstName() {
-		return firstName;
+		return FirstName;
 	}
 	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+		FirstName = firstName;
 	}
 	public String getLastName() {
-		return lastName;
+		return LastName;
 	}
 	public void setLastName(String lastName) {
-		this.lastName = lastName;
+		LastName = lastName;
 	}
 	public String getUserName() {
-		return userName;
+		return UserName;
 	}
 	public void setUserName(String userName) {
-		this.userName = userName;
+		UserName = userName;
 	}
 	public String getGender() {
-		return gender;
+		return Gender;
 	}
 	public void setGender(String gender) {
-		this.gender = gender;
+		Gender = gender;
 	}
 	public String getEmail() {
-		return email;
+		return Email;
 	}
 	public void setEmail(String email) {
-		this.email = email;
+		Email = email;
 	}
 	public String getPassword() {
-		return password;
+		return Password;
 	}
 	public void setPassword(String password) {
-		this.password = password;
+		Password = password;
+	}
+	public String getCountry() {
+		return Country;
+	}
+	public void setCountry(String country) {
+		Country = country;
+	}
+	public String getUserImage() {
+		return UserImage;
+	}
+	public void setUserImage(String userImage) {
+		UserImage = userImage;
+	}
+	public String getUserDescription() {
+		return UserDescription;
+	}
+	public void setUserDescription(String userDescription) {
+		UserDescription = userDescription;
 	}
 
+	
 }
