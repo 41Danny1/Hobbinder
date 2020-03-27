@@ -9,12 +9,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.cupojava.hobbinder.model.Header;
+
 @Controller
 public class MessagingController {
 
 	
-	@RequestMapping("/messaging")
-	public String handler(Model model) {
-		return "messagingLayout";
-	}
+    @RequestMapping("/messaging")
+    public String handler(Model model) {
+	Header header = new Header();
+	model.addAttribute("headerTemplate", header);
+	return "messagingLayout";
+    }
 }
