@@ -25,21 +25,26 @@
 
       <div class="row">
 	<div class="col-12" style="border: 1px solid #DDDDDD; border-radius: .25rem;">
-	  <form style="margin-top: 15px;">
+	
+	<form:form modelAttribute="post" style="margin-top: 15px;">
 	    <div class="form-group">
 	      <label for"hobby">Hobby</label>
-	      <input type="text" class="form-control col-4" id="hobby">
+	      <form:input path="communityID" class="form-control col-4" id="hobby" />
 	    </div>
 	    <div class="form-group">
 	      <label for"postTitle">Post Title</label>
-	      <input type="text" class="form-control" id="postTitle" placeholder="Title of Your Post">
+	      <form:input path="title" cssClass="form-control" id="postTitle" placeholder="Title of Your Post"/>
 	    </div>
 	    <div class="form-group">
 	      <label for"postContents">Contents</label>
-	      <textarea class="form-control" id="postContents" placeholder="Lorem ipsum ..."></textarea>
+	      <form:textarea path="content" cssClass="form-control" />
+	      
 	    </div>
-	    <input class="btn btn-primary defButton" type="submit" value="Create">
-	  </form>
+	    <div class="form-group">
+	    	<form:button class="btn btn-primary defButton" >Post</form:button>
+	    </div>
+	  </form:form>
+	  
 	</div>
       </div>
 

@@ -57,5 +57,20 @@ public class PostDaoImpl implements PostDao {
 			return post;
 		}
 	}
+
+	public int createPost(String title, String content, String date, int communityID, int authorID) {
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("title", title);
+		params.put("content", content);
+		params.put("date", date);
+		params.put("cid", communityID);
+		params.put("aid", authorID);
+
+		String sql = "INSERT INTO POSTS(PostTitle, PostContent, PostCreationDate, CommunityID, UserID) VALUES(:title, :content, :date, :cid, :aid)";
+//		System.out.println(sql+", "+title+", "+content+", "+date+", "+communityID+", "+authorID);
+//		return 1;
+		
+		return namedParameterJdbcTemplate.update(sql, params);
+	}
 	
 }
