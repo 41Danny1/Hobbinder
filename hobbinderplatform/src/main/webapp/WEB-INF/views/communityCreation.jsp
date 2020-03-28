@@ -137,7 +137,7 @@
                 </div>
 
             </div>
-            <button type="button" class="btn btn-primary" style="margin-bottom: 10px;">Create</button>
+            <button type="button" class="btn btn-primary" value="create" style="margin-bottom: 10px;">Create</button>
 
             <div class="col-md-4"></div>
 
