@@ -26,7 +26,15 @@ public class CommunityController {
 		model.addAttribute("headerTemplate", header);
 
 		Post p = postDao.findPostByCode(1);
-		System.out.println(p.getContent());
+//		System.out.println(p.render());
+//		System.out.println(postDao.findPostsByCommunity(1).size());
+//		model.addAttribute("posts", p.render());
+		String posts = "";
+		List<Post> postObjects = postDao.findPostsByCommunity(1);
+		for(int i=0; i<postObjects.size(); i++)
+			posts += postObjects.get(i).render();
+		
+		model.addAttribute("posts", posts);
 
 		return "communityLayout";
 	}

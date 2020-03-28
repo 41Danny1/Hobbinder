@@ -3,6 +3,7 @@ package com.cupojava.hobbinder.dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,9 +35,14 @@ public class PostDaoImpl implements PostDao {
         return result;
 	}
 
-	public Post[] findPostsByCommunity(int communityID) {
-		
-		return null;
+	public List<Post> findPostsByCommunity(int communityID) {
+		Map<String, Object> params = new HashMap<String, Object>();
+        params.put("id", communityID);	
+        
+        String sql = "SELECT * FROM POSTS WHERE CommunityID=:id";
+        List<Post> results = namedParameterJdbcTemplate.query(sql, params, new PostMapper());
+        
+        return results;
 	}
 	
 	private static final class PostMapper implements RowMapper<Post> {
