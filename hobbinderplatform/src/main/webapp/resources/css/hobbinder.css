@@ -1,0 +1,30 @@
+.headerBar{
+    background-color: #f45200;
+    padding: 5px;
+}
+.headerTitle{
+    color: white;
+    font-size: 30px
+}
+.headerIcon{
+    width: 48px;
+    height: 48px;
+}
+a.defLinks{
+    color: #212529;
+}
+a.defLinks:hover{
+    color: #444444;
+    text-decoration: none;
+}
+.defButton, .defButton:visited{
+    background-color: #f45200 !important;
+    border-color: #f41500 !important;
+}
+.defButton:focus, .defButton:hover, .defButton:active{
+    background-color: #ff7028 !important;
+    border-color: #f41500 !important;
+}
+a.noDecor:hover{
+    text-decoration: none;
+}
