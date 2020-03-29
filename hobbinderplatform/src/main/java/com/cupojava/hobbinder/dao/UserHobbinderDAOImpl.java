@@ -23,7 +23,19 @@ public class UserHobbinderDAOImpl implements UserHobbinderDAO {
 		this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
 	}
 	
-	public int addUser(String FirstName, String LastName, String UserName, String Gender, String Country, String
+	public UsersHobbinder findUserByID (int userID) {
+		Map<String, Object> params = new HashMap<String, Object>();
+        params.put("UserID", userID);
+        
+        String sql = "SELECT * FROM HOB_USERS WHERE UserID = :userID";
+        
+        UsersHobbinder result = namedParameterJdbcTemplate.queryForObject(sql, params, new UsersHobbinderMapper());
+        
+        return result;
+		
+	}
+	
+	public int createUser(String FirstName, String LastName, String UserName, String Gender, String Country, String
 			UserImage, String UserDescription, String Email, String Password) {
 		
 		Map<String, Object> params = new HashMap<String, Object>();
@@ -63,23 +75,6 @@ public class UserHobbinderDAOImpl implements UserHobbinderDAO {
 		}
 	}
 
-	public UsersHobbinder findByEmail(String email) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
-	public List<UsersHobbinder> findUsersHobbinder(String FirstName, String LastName, String UserName, String Gender, String Country, String
-			UserImage, String UserDescription, String Email, String Password) {
-
-		Map<String, Object> params = new HashMap<String, Object>();
-		params.put("Email", Email);
-		
-		String sql = "SELECT * FROM HOB_USERS;";
-		
-		List<UsersHobbinder> usersResult = namedParameterJdbcTemplate.query
-				(sql, params, new UsersHobbinderMapper());
-		
-		return usersResult;
-	}
 
 }
