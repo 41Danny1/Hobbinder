@@ -15,7 +15,7 @@ import com.cupojava.hobbinder.model.community;
 
 
 @Repository
-public class communityDaompl implements communityDao {
+public class eventDaompl implements eventDao {
 
 	NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
@@ -24,13 +24,15 @@ public class communityDaompl implements communityDao {
 		this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
 	}
 
-	public int addCommunity(String name, String about, String type) {
+	public int addEvent(String name, String date, String location, String time, String description) {
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("name", name);
-		params.put("about", about);
-		params.put("type", type);
+		params.put("date", date);
+		params.put("location", location);
+		params.put("time", time);
+		params.put("description", description);
 		
-		String sql = "INSERT INTO COMMUNITIES(CommunityName, CommunityAbout, CommunityType) VALUES(:name, :about, :type)";
+		String sql = "INSERT INTO EVENTS(EventName, EventDate, EventLocation, EventTime, EventDescription) VALUES(:name, :date, :location, :time, :description)";
 
 //        Student result = namedParameterJdbcTemplate.queryForObject(
 //                    sql,

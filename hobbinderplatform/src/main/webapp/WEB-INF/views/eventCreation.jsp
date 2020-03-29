@@ -10,8 +10,7 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<link href="<c:url value="/resources/css/eventcreation.css" />"
-	rel="stylesheet">
+<link href="<c:url value="/resources/css/eventcreation.css" />" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,400|Yellowtail" rel="stylesheet">
 
 </head>
@@ -41,7 +40,7 @@
 
             <ul class="floated nav-div nav-links">
                 <li class="rela-inline"><a href="">Home</a></li>
-                <li class="rela-inline"><a href="community">Community</a></li>
+                <li class="rela-inline"><a href="comunity">Community</a></li>
                 <li class="rela-inline"><a href="event">Events</a></li>
                 <li class="rela-inline"><a href="profile.html">Profile</a></li>
                 <li class="rela-inline"><a href="">About us</a>
@@ -118,11 +117,12 @@
         <div class="col-md-4"></div>
 
         <div class="col-md-4">
+        <form:form modelAttribute="event">
             <label class="label control-label">Event Name</label>
             <div class="input-group">
                 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span>
                 </span>
-                <input type="text" class="form-control" name="Name" placeholder="event name">
+                <form:input path="name" class="form-control" placeholder="event name" />
 
             </div>
 
@@ -131,7 +131,7 @@
             <div class="input-group">
                 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span>
                 </span>
-                <input type="text" class="form-control" name="Name" placeholder="location">
+                <form:input path = "location" class="form-control" name="Name" placeholder="location" />
             </div>
 
 
@@ -140,16 +140,26 @@
             <div class="input-group">
                 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span>
                 </span>
-                <textarea name="about" id="commBox" placeholder="what's the event about?"></textarea>
+                <form:textarea path="about" id="commBox" />
             </div>
 
-            <label class="label control-label">Date & Time</label>
+            <label class="label control-label">Date</label>
             <div class="input-group">
 
                 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span>
                 </span>
-                <input type="datetime-local" class="form-control" name="Name">
+                <form:input path="date" class="form-control" name="Name" />
             </div>
+            
+            <label class="label control-label">Time</label>
+            <div class="input-group">
+
+                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span>
+                </span>
+                <form:input path="time" class="form-control" name="Name" />
+            </div>
+            
+            </form:form>
 
 
             <div class="btn-group">

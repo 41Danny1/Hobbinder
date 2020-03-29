@@ -6,6 +6,6 @@ import com.cupojava.hobbinder.model.Course;
 
 public interface communityDao {
 
-	int addCommunityName(String cName);
+	int addCommunity(String name, String about, String type);
 
 }
