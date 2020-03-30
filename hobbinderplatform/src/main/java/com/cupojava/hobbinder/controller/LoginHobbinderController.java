@@ -1,38 +1,53 @@
 package com.cupojava.hobbinder.controller;
 
-import java.time.LocalDateTime; 
-import java.util.ArrayList;
-import java.util.List;
+import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
-import com.cupojava.hobbinder.model.HelloWorld;
+import com.cupojava.hobbinder.dao.UserHobbinderDAO;
 import com.cupojava.hobbinder.model.LoginHobbinder;
-import com.cupojava.hobbinder.model.Message;
-import com.cupojava.hobbinder.model.User;
+import com.cupojava.hobbinder.model.UsersHobbinder;
 
 @Controller
+@SessionAttributes("usersHobbinder")
 public class LoginHobbinderController {
-
 	
-	@RequestMapping("/loginHobbinder")
-	public String handler(Model model) {
-
-		LoginHobbinder loginHobbinder = new LoginHobbinder();
-		List<Message> strings = new ArrayList<Message>();
-		for(int i = 0; i < 5; i++) {
-			String tmpStr = "String" + i;
-			Message msg = new Message();
-			msg.setContent(tmpStr);
-			strings.add(msg);
-		}
-		
-		loginHobbinder.setMessages(strings);
-		loginHobbinder.setDateTime(LocalDateTime.now().toString());
-		model.addAttribute("temp", loginHobbinder);
-		return "loginHobbinder";
+	@Autowired
+	UserHobbinderDAO userHobbinderDao;
+	
+	@ModelAttribute("loginHobbinder")
+	public LoginHobbinder loginHobbinderForm() {
+		return new LoginHobbinder();
 	}
+	
+	@GetMapping("/userLogin")
+	public String login(HttpSession session) {
+		UsersHobbinder usersHobbinder = (UsersHobbinder) session.getAttribute("usersHobbinder");
+		if(usersHobbinder != null) {
+			return "initialPage";
+		}
+		return "userLogin";
+	}
+	
+	@PostMapping("/userLogin")
+	public String login(@ModelAttribute("loginHobbinder") LoginHobbinder loginHobbinder, Model model) {
+		UsersHobbinder usersHobbinder = userHobbinderDao.findByEmail(loginHobbinder.getEmail());
+		model.addAttribute("message", "Login Fail");
+		
+		if(usersHobbinder != null && usersHobbinder.getPassword().equals(loginHobbinder.getPassword())) {
+			model.addAttribute("usersHobbinder", usersHobbinder);
+			model.addAttribute("message", "Login Successfull");
+			return "initialPage";
+		}
+		return "userLogin";
+	}
+	
+	
 }

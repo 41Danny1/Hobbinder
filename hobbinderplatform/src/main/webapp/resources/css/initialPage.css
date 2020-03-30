@@ -383,8 +383,8 @@ body {
 		.formContainer > p {
 			text-align: center;
 			}
-
-		input[type=text], input[type=password] {
+			
+		form:input[type=text], form:input[type=password] {
 			width: 70%;
 			padding: 15px;
 			margin: 10px 0 10px 0;

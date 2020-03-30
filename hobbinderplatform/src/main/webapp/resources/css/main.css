@@ -608,6 +608,13 @@
 		height: 10%;
 		width: 10%;
 	}
+	
+	.input-form {
+		background-color: #f4f4f4;
+	}
+	.col-12 {
+		background-color: #fff;
+	}
 
   }
   

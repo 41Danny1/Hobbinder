@@ -23,16 +23,25 @@ public class UserHobbinderDAOImpl implements UserHobbinderDAO {
 		this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
 	}
 	
-	public UsersHobbinder findUserByID (int userID) {
+	public UsersHobbinder findByEmail(String email) {
 		Map<String, Object> params = new HashMap<String, Object>();
-        params.put("UserID", userID);
+        params.put("Email", email);
         
-        String sql = "SELECT * FROM HOB_USERS WHERE UserID = :userID";
+        String sql = "SELECT * FROM HOB_USERS WHERE Email = :Email";
         
         UsersHobbinder result = namedParameterJdbcTemplate.queryForObject(sql, params, new UsersHobbinderMapper());
         
         return result;
 		
+	}
+	
+	public List<UsersHobbinder> findUsersHobbinder(int userID) {
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("UserID", userID);
+		
+		String sql = "SELECT * FROM HOB_USERS WHERE UsersID = :UsersID";
+		List<UsersHobbinder> result = namedParameterJdbcTemplate.query(sql, params, new UsersHobbinderMapper());
+		return result;
 	}
 	
 	public int createUser(String FirstName, String LastName, String UserName, String Gender, String Country, String
@@ -55,7 +64,7 @@ public class UserHobbinderDAOImpl implements UserHobbinderDAO {
 				+ " VALUES(:FirstName, :LastName, :UserName, :Gender, :Country, :UserImage, "
 				+ ":UserDescription, :Email, :Password)";
 
-
+		System.out.println(sql);
 		return namedParameterJdbcTemplate.update(sql, params);
 	}
 	

@@ -1,25 +1,21 @@
 package com.cupojava.hobbinder.model;
-
-import java.util.List;
  
 public class LoginHobbinder {
-	private List<Message> messages;
-
-	public List<Message> getMessages() {
-		return messages;
+	private String Email;
+	private String Password;
+	
+	public String getEmail() {
+		return Email;
 	}
-
-	public void setMessages(List<Message> messages) {
-		this.messages = messages;
+	public void setEmail(String email) {
+		Email = email;
 	}
-
-	private String dateTime;
-
-	public String getDateTime() {
-		return dateTime;
+	public String getPassword() {
+		return Password;
 	}
-
-	public void setDateTime(String dateTime) {
-		this.dateTime = dateTime;
+	public void setPassword(String password) {
+		Password = password;
 	}
+	
+	
 }

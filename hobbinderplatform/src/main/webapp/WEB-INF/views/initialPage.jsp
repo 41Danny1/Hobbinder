@@ -7,7 +7,7 @@
 <meta charset="ISO-8859-1">
 <title>Initial Page</title>
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/initialPage.css" />">
-    <link rel="stylesheet" href="<c:url value="/resources/css/initialPage2.css" />">integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="<c:url value="/resources/css/initialPage2.css" /> integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,400|Yellowtail" rel="stylesheet">
     <link rel="stylesheet" href="<c:url value="/resources/css/initialPage3.css" />">
     <script src="<c:url value="/resources/js/initialPage.js" />"></script>
@@ -40,8 +40,8 @@
             <!-- <input type="text" placeholder="Search" class="rela-inline nav-search" style="float: right;"/> -->
           </div>
             <ul class="floated right nav-div" >
-              <li class="rela-inline"><a href="<c:url value="registerUser" />"> Register<font color="#f45200"></font></a></li>
-              <li class="rela-inline"><a href="<c:url value="loginHobbinder" />">Login<font color="#f45200"></font></a></li>
+              <li class="rela-inline"><a href="<c:url value="registration" />"> Register<font color="#f45200"></font></a></li>
+              <li class="rela-inline"><a href="<c:url value="userLogin" />">Login<font color="#f45200"></font></a></li>
               <div class="abs-center menu-background"></div>
             </ul>
           </div>

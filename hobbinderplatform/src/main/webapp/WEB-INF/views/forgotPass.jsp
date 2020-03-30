@@ -7,7 +7,7 @@
 <meta charset="ISO-8859-1">
 <title>Forgot Password</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="<c:url value="/resources/css/initialPage2.css" />"> integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="<c:url value="/resources/css/initialPage2.css" />" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/initialPage.css" />">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,400|Yellowtail" rel="stylesheet">
     <link rel="stylesheet" href="<c:url value="/resources/css/initialPage3.css" />">

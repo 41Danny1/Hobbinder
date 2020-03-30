@@ -7,48 +7,52 @@
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="resources/css/hobbinder.css">
-    <link rel="stylesheet" href="resources/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,400|Yellowtail" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/main.css">
     <script src="https://kit.fontawesome.com/3e471b317e.js" crossorigin="anonymous"></script>
-    <title>New Post | Hobbinder</title>
+    <title>Login</title>
   </head>
-  <body>
+  <body style="margin: auto; max-width: 1000px;">
 
       ${headerTemplate.template}      
 
-    <div class="container" style="margin-top: 15px;">
-
-      <div class="row">
-	<div class="col-12">
-	  <h1>New Post</h1>
-	</div>
+    <div class="container" >
+      <div class="register">
+		<br>
+	  		<h2><font color="#f45200">Share. Grow. Inspire.</font></h2>
       </div>
+     </div>
+      <br>
 
       <div class="row">
 	<div class="col-12" style="border: 1px solid #DDDDDD; border-radius: .25rem;">
 	
-	<form:form modelAttribute="post" style="margin-top: 15px;">
+	<form:form modelAttribute="loginHobbinder" style="margin-top: 15px;"  method= "post" action="postcreation">
 	    <div class="form-group">
-	      <label for"hobby">Hobby</label>
-	      <form:input path="communityID" class="form-control col-4" id="hobby" />
+	      <label>Username</label>
+	      <form:input path="Email" class="form-control" id="Email" placeholder="Enter your Email"/>
 	    </div>
+
 	    <div class="form-group">
-	      <label for"postTitle">Post Title</label>
-	      <form:input path="title" cssClass="form-control" id="postTitle" placeholder="Title of Your Post"/>
+	      <label for"postTitle">Password</label>
+	      <form:input path="Password" cssClass="form-control" id="Password" placeholder="Create a Password"/>
 	    </div>
+	        
 	    <div class="form-group">
-	      <label for"postContents">Contents</label>
-	      <form:textarea path="content" cssClass="form-control" />
-	      
+	    	<form:button class="btn btn-primary defButton" >Submit</form:button>
 	    </div>
-	    <div class="form-group">
-	    	<form:button class="btn btn-primary defButton" >Post</form:button>
-	    </div>
+	    	    <p>Forgot your<a href="forgotPass"> password</a></p>
 	  </form:form>
 	  
 	</div>
       </div>
+ 
 
-    </div>
   </body>
+  
+  <!-- Footer -->
+<footer class="text-center">
+    <p>	&#169; 2020 Hobbinder <a href="https://www.hobbinder.ca" data-toggle="tooltip" title="Visit Hobbinder">www.hobbinder.ca</a></p> 
+  </footer>
+  
 </html>
