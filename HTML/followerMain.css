@@ -1,0 +1,60 @@
+a.list-group-item {
+    height:auto;
+    min-height:220px;
+}
+a.list-group-item.active small {
+    color:#fff;
+}
+.stars {
+    margin:20px auto 1px;    
+}
+
+#follower_table{
+    margin: 20px;
+    
+}
+
+.row{
+    height:  130px;
+    border-style: groove;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.user_name{
+    font-size: 20px;
+    margin-bottom: -1px;   
+    margin-top: 5px;    
+}
+
+.user_id{
+    font-size: 15px;
+    color: #d1d1e0;
+    margin-bottom: -1px;  
+    
+}
+
+a {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+
+  .rela-block {
+	display: block;
+	position: relative;
+    /* margin: auto; */
+    margin-top: 20px;
+	/* top: ;
+	left: ;
+	right: ;
+	bottom: ; */
+  }
+
+
+.top_follow{
+    margin-top: -50px;
+}
+
+

@@ -394,10 +394,9 @@
 	width: 180px;
 	border: 10px solid #fff;
 	border-radius: 100%;
-	background: url("haruka.jpg") center no-repeat;
 	background-size: cover;
   }
-  
+
   .profile-name-container {
 	margin: 0 auto 10px;
 	padding: 10px;

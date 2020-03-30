@@ -13,6 +13,7 @@ import org.springframework.stereotype.Repository;
 
 import com.cupojava.hobbinder.model.Course;
 import com.cupojava.hobbinder.model.Student;
+import com.cupojava.hobbinder.model.User;
 
 @Repository
 public class StudentDaoImpl implements StudentDao {
@@ -100,6 +101,16 @@ public class StudentDaoImpl implements StudentDao {
 		List<Course> courseResults = namedParameterJdbcTemplate.query(sql, params, new CourseMapper());
 		
 		return courseResults;
+	}
+
+	public User findByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<User> findAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
