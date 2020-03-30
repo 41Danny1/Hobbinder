@@ -45,6 +45,16 @@ public class PostDaoImpl implements PostDao {
         return results;
 	}
 	
+	public List<Post> findRandomPosts(int ID) {
+		Map<String, Object> params = new HashMap<String, Object>();
+        params.put("id", ID);	
+        
+        String sql = "SELECT * FROM POSTS";
+        List<Post> results = namedParameterJdbcTemplate.query(sql, params, new PostMapper());
+        
+        return results;
+	}
+	
 	private static final class PostMapper implements RowMapper<Post> {
 
 		public Post mapRow(ResultSet rs, int rowNum) throws SQLException {
