@@ -27,7 +27,7 @@ public class EventController {
 	@Autowired
 	eventDao eDao;
 
-	@GetMapping("/event")
+	@GetMapping("/eventCreation")
 	public String handler1(@ModelAttribute("event") event Event, Model model) {
 		return "eventCreation";
 	}
@@ -37,9 +37,9 @@ public class EventController {
 	{
 		Header header = new Header();
 		model.addAttribute("headerTemplate", header);
-		//System.out.println(Community.getName() + " " + Community.getAbout());
+		System.out.println(Event.getName() + " " + Event.getDate() + " " + Event.getTime());
 		//System.out.println(Community.getType());
-		eDao.addEvent(Event.getName(), Event.getDate(), Event.getLocation(), Event.getTime(), Event.getDescription());
+		//eDao.addEvent(Event.getName(), "2020-09-11", Event.getLocation(), "10:30:15.11", Event.getDescription());
 		return "eventCreation";
 	}
 	

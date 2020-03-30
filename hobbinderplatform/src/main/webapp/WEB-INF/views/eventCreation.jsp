@@ -110,9 +110,6 @@
         <div class="col-md-4"></div>
     </div>
 
-
-
-
     <div class="row">
         <div class="col-md-4"></div>
 
@@ -134,13 +131,11 @@
                 <form:input path = "location" class="form-control" name="Name" placeholder="location" />
             </div>
 
-
-
             <label class="label control-label">Description</label>
             <div class="input-group">
                 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span>
                 </span>
-                <form:textarea path="about" id="commBox" />
+                <form:textarea path="description" id="commBox" />
             </div>
 
             <label class="label control-label">Date</label>
@@ -148,7 +143,7 @@
 
                 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span>
                 </span>
-                <form:input path="date" class="form-control" name="Name" />
+                <form:input path="date" type="date" class="form-control" name="Name" />
             </div>
             
             <label class="label control-label">Time</label>
@@ -156,10 +151,10 @@
 
                 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span>
                 </span>
-                <form:input path="time" class="form-control" name="Name" />
+                <form:input path="time" type="time" class="form-control" name="Name" />
             </div>
             
-            </form:form>
+            
 
 
             <div class="btn-group">
@@ -177,8 +172,8 @@
             </div>
 
 
-            <button type="button" class="btn btn-primary">Create Event</button>
-
+            <form:button class="btn btn-primary">Create Event</form:button>
+			</form:form>
 
 
         </div>
