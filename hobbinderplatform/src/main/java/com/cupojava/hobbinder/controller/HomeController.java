@@ -30,7 +30,7 @@ public class HomeController {
 //		System.out.println(postDao.findPostsByCommunity(1).size());
 //		model.addAttribute("posts", p.render());
 		String posts = "";
-		List<Post> postObjects = postDao.findRandomPosts(1);
+		List<Post> postObjects = postDao.findRandomPosts();
 		
 		ArrayList<Integer> list = new ArrayList<Integer>();
 	     for (int i = 0; i < postObjects.size() ; i++) {
