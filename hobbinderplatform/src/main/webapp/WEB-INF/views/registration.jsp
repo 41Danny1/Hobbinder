@@ -41,13 +41,30 @@
 	      <label>Username</label>
 	      <form:input path="UserName" class="form-control" id="username" placeholder="Create a username"/>
 	    </div>
-	   	<div class="form-group">
-	      <label>Gender</label>
-	      <form:input path="Gender" class="form-control" id="gender" placeholder="Inform your gender"/>
-	    </div>
+	   	<fieldset class="form-group">
+          <label for="gendername"><b>Gender</b></label><br>
+            <label for="female">Female</label>
+            <input name="gender" id="female" value="Female" type="radio" />
+            <label for="male"> &nbsp; &nbsp;Male</label>
+            <input  name="gender" id="male" value="Male" type="radio" />
+        </fieldset>
 	   	<div class="form-group">
 	      <label>Country</label>
-	      <form:input path="Country" class="form-control" id="gender" placeholder="Enter your country"/>
+	      	<form:select id="country" path="Country" >
+			  <option value="Canada">Canada</option>
+			  <option value="Australia">Australia</option>
+			  <option value="Brazil">Brazil</option>
+			  <option value="China">China</option>
+			  <option value="France">France</option>
+			  <option value="Germany">Germany</option>
+			  <option value="Germany">Germany</option>
+			  <option value="India">India</option>
+			  <option value="Mexico">Mexico</option>
+			  <option value="Portugal">Portugal</option>
+			  <option value="Spain">Spain</option>
+			  <option value="United Kingdom">United Kingdom</option>
+			  <option value="United States of America">United States of America</option>
+			</form:select>
 	    </div>
 	    <div class="form-group">
 	      <label for"postTitle">Image</label>
@@ -63,8 +80,18 @@
 	    </div>
 	    <div class="form-group">
 	      <label for"postTitle">Password</label>
-	      <form:input path="Password" cssClass="form-control" id="postTitle" placeholder="Create a Password"/>
+	      <form:input path="Password" type="password" cssClass="form-control" id="myInput" onclick="myFunction()" placeholder="Create a Password"/>
 	    </div>
+	    <script>
+	    	function myFunction() {
+	    		var x = document.getElementById("myInput");
+	    		if(x.type == "password") {
+	    			x.type = "text";
+	    		} else {
+	    			x.type = "password";
+	    		}
+	    	}
+	    </script>
 	        
 	    <div class="form-group">
 	    	<form:button class="btn btn-primary defButton" >Submit</form:button>

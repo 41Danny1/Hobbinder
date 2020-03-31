@@ -31,7 +31,7 @@ public class LoginHobbinderController {
 	public String login(HttpSession session) {
 		UsersHobbinder usersHobbinder = (UsersHobbinder) session.getAttribute("usersHobbinder");
 		if(usersHobbinder != null) {
-			return "initialPage";
+			return "home";
 		}
 		return "userLogin";
 	}
@@ -44,7 +44,7 @@ public class LoginHobbinderController {
 		if(usersHobbinder != null && usersHobbinder.getPassword().equals(loginHobbinder.getPassword())) {
 			model.addAttribute("usersHobbinder", usersHobbinder);
 			model.addAttribute("message", "Login Successfull");
-			return "initialPage";
+			return "home";
 		}
 		return "userLogin";
 	}
