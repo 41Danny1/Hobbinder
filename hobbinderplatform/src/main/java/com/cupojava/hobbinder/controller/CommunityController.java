@@ -57,7 +57,7 @@ public class CommunityController {
 		return "eventCreation";
 	}
 	
-	@RequestMapping("/comunity")  
+	@RequestMapping("/community")  
     public String comunity()  
     {  
         return "communityCreation";  

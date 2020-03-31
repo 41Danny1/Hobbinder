@@ -45,8 +45,8 @@
 			</div>
 			<ul class="floated nav-div nav-links">
 				<li class="rela-inline"><a href="">Home</a></li>
-				<li class="rela-inline"><a href="comunity">Community</a></li>
-				<li class="rela-inline"><a href="event">Events</a></li>
+				<li class="rela-inline"><a href="communityCreation">Community</a></li>
+				<li class="rela-inline"><a href="eventCreation">Events</a></li>
 				<li class="rela-inline"><a href="profile.html">Profile</a></li>
 				<li class="rela-inline"><a href="">About us</a>
 				<li>
@@ -133,7 +133,7 @@
 					<span class="input-group-addon"><span
 						class="glyphicon glyphicon-user"></span> </span>
 					<div class="btn-group">
-						<form:radiobutton path = "type" value = "public" label = "Public" />
+						<form:radiobutton path = "type" value = "public" label = "Public" style="margin-left: 10px;"/>
 						<form:radiobutton path = "type" value = "private" label = "Private" />
 					</div>
 				</div>

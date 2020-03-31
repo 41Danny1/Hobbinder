@@ -151,7 +151,7 @@
 
                 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span>
                 </span>
-                <form:input path="time" type="time" class="form-control" name="Name" />
+                <form:input path="time" type="time" step="1" class="form-control" name="Name" />
             </div>
             
             

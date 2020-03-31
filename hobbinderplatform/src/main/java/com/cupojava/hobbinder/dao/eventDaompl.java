@@ -32,8 +32,7 @@ public class eventDaompl implements eventDao {
 		params.put("time", time);
 		params.put("description", description);
 		
-		String sql = "INSERT INTO EVENTS VALUES(:name, :date, :location, :time, :description)";
-		//String sql = "INSERT INTO EVENTS(EventName, EventDate, EventLocation, EventTime, EventDescription) VALUES(:name, :date, :location, :time, :description)";
+		String sql = "INSERT INTO EVENTS(EventName, EventDate, EventLocation, EventTime, EventDescription) VALUES(:name, :date, :location, :time, :description)";
 
 //        Student result = namedParameterJdbcTemplate.queryForObject(
 //                    sql,
