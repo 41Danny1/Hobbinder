@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="resources/css/hobbinder.css">
     <link rel="stylesheet" href="resources/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,400|Yellowtail" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3e471b317e.js" crossorigin="anonymous"></script>
     <title>New Post | Hobbinder</title>
   </head>
@@ -45,21 +46,6 @@
 	    </div>
 	  </form:form>
 	  
-	</div>
-      </div>
-
-      <div class="row" style="margin-top: 15px; margin-bottom: 15px;">
-	<div class="col-4">
-	  Quick Links<br>
-	  <a href="#" class="defLinks">Home</a><br>
-	  <a href="#" class="defLinks">Profile</a><br>
-	  <a href="#" class="defLinks">Settings</a><br>
-	</div>
-	<div class="col-4">
-	</div>
-	<div class="col-4" style="text-align: right;">
-	  <a href="#" class="defLinks">Privacy Policy</a><br>
-	  <a href="#" class="defLinks">Terms of Use</a>
 	</div>
       </div>
 
