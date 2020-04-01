@@ -57,14 +57,13 @@
                 <li class="rela-block">Tags</li><li class="rela-block">Contact</li></ul>
                 <ul class="menu-links sign-links"><li class="rela-block">Sign-Up</li>
                         <li class="rela-block">Sign-Out</li></ul></div></div></div></div>
-
-        <div class="rela-block container">
-        <div class="rela-block profile-card"><div class="profile-pic" id="profile_pic" style="background-image: url(resources/images/haruka.jpg)"></div><div class="rela-block 
-        profile-name-container"><div class="rela-block user-name" id="user_name">Haruka Kotani</div><div class="rela-block 
-        user-desc"id="user_description">@haruka_kotani</div></div><div class="rela-block profile-card-stats"><div class="floated 
-        profile-stat works" id="num_works"><a href="url"><font color="#f45200">28</font></a><br></div><div class="floated profile-stat followers" 
-        id="num_followers"><a href="profile_followers.html"><font color="#f45200">128</font></a><br></div><div class="floated profile-stat following" id="num_following">
-        <a href="profile_following.html"><font color="#f45200">118</font></a><br></div></div></div><div 
+       
+        
+        ${profile}
+        
+        
+        
+        <div 
         class="rela-block content"><div class="rela-inline image" ></div><div class="rela-inline image"></div><div class="rela-inline 
         image"></div><div class="rela-inline image"></div><div class="rela-inline image"></div><div class="rela-inline 
         image"></div><div class="rela-inline image"></div><div class="rela-inline image"></div><div class="rela-inline 

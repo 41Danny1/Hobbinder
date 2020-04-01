@@ -1,4 +1,4 @@
-INSERT INTO HOB_USERS VALUES(1, 'John', 'Smith', 'js123','js@test.com', '123456', 'Male', 'Canada', null, 'Hello there!');
+INSERT INTO HOB_USERS VALUES(1, 'John', 'Smith', 'js123','js@test.com', '123456', 'Male', 'Canada', null, 'Hi there! I love spending the weekend outside exploring the area, BBQing with friends, and harassing my dog.');
 INSERT INTO COMMUNITIES VALUES (1, 'Sample Community', null, 'Testing123', 'asdf', '1');
 INSERT INTO POSTS VALUES (1, 'Test post 1', 'Lorem Ipsum', '2020-03-27', 1, 1);
 INSERT INTO POSTS VALUES (2, 'Test post 2', 'Lorem Ipsummmm', '2020-03-27', 1, 1);
@@ -34,22 +34,20 @@ INSERT INTO HOB_USERS
 VALUES (null, 'Jeff', 'Bezos', 'Jeff55', 'jeff@GMAIL.COM', '1111', 'MALE', 'CANADA', '', 'FROM Amazon');
 
 INSERT INTO USER_FOLLOWERS
-VALUES (1, 2);
+VALUES (2, 1);
 
 INSERT INTO USER_FOLLOWERS
-VALUES (3, 2);
+VALUES (3, 1);
 
 INSERT INTO USER_FOLLOWERS
-VALUES (4, 2);
+VALUES (4, 1);
 
 INSERT INTO USER_FOLLOWERS
-VALUES (5, 2);
+VALUES (5, 1);
 
 INSERT INTO USER_FOLLOWERS
-VALUES (6, 2);
+VALUES (6, 1);
 
-INSERT INTO USER_FOLLOWERS
-VALUES (1, 2);
 
 INSERT INTO USER_FOLLOWING
 VALUES (2, 1);

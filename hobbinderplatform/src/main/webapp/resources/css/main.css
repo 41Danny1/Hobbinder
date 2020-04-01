@@ -424,7 +424,7 @@
 	height: 100%;
 	width: 33.3333%;
   }
-  .profile-stat:after {
+  .profile-stat:after{
 	color: #999;
   }
   .works::after {
@@ -607,6 +607,10 @@
 		height: 10%;
 		width: 10%;
 	}
-
+/* 	
+	#user_description{
+		color: red;
+	} */
+	
   }
   

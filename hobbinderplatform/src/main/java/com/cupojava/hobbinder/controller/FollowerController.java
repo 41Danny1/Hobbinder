@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.cupojava.hobbinder.dao.FollowDao;
 import com.cupojava.hobbinder.dao.PostDao;
+import com.cupojava.hobbinder.dao.ProfileDaoImp;
 import com.cupojava.hobbinder.model.Follow;
 import com.cupojava.hobbinder.model.Post;
 
@@ -27,7 +28,8 @@ public class FollowerController {
 	public String handler(Model model) {
 		
 		String users = "";
-		List<Follow> userObjects = followDao.findFollowerByUser(2);
+		List<Follow> userObjects = followDao.findFollowerByUser(1);
+		
 		
 		for(int i=0; i<userObjects.size(); i++)
 			users += userObjects.get(i).render();

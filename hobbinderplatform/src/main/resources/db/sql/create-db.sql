@@ -18,7 +18,7 @@ CREATE TABLE HOB_USERS (
 	Gender VARCHAR(15), 
 	Country VARCHAR(30), 
 	UserImage VARCHAR(50), 
-	UserDescription VARCHAR(200)
+	UserDescription VARCHAR(500)
 );
 
 CREATE TABLE COMMUNITIES (

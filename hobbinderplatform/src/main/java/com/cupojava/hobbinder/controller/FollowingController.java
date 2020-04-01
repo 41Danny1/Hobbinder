@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.cupojava.hobbinder.dao.FollowDao;
+import com.cupojava.hobbinder.dao.ProfileDaoImp;
 import com.cupojava.hobbinder.model.Follow;
 
 
@@ -18,7 +19,6 @@ public class FollowingController {
 	
 	@Autowired
 	FollowDao followDao;
-
 	
 	@RequestMapping("/profile_following")
 	public String handler(Model model) {
