@@ -59,6 +59,11 @@
 	  color: white;
       }
     </style>
+    <script>
+     window.onload = function(){
+	 document.getElementById("content").focus();
+     }
+    </script>
   </head>
   <body>
 

@@ -66,7 +66,7 @@ public class MessagingController {
 		
 		pmDao.sendMessage(msgToSend.getContent(), 1, id, "2020-04-01", "");
 		
-		return handler(id, session, model);
+		return "redirect:/messaging?id="+id;
     }
 	
 }
