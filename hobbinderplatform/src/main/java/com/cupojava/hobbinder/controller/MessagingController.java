@@ -50,7 +50,7 @@ public class MessagingController {
 		String render = "";
 
 		for (int i = 0; i < messages.size(); i++)
-			if (messages.get(i).getSenderID() == id)
+			if (messages.get(i).getSenderID() == user.getUserID())
 				render += messages.get(i).renderSend();
 			else
 				render += messages.get(i).renderReceive();
