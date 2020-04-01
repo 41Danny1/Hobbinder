@@ -1,10 +1,13 @@
-INSERT INTO HOB_USERS VALUES(1, 'John', 'Smith', 'js123','js@test.com', '123456', 'Male', 'Canada', null, 'Hello there!');
+INSERT INTO HOB_USERS VALUES(1, 'John', 'Smith', 'js123', 'Male', 'Canada', '', 'Hello there!', 'js@test.com', '123456');
+INSERT INTO HOB_USERS VALUES(2, 'Jane', 'Doe', 'ja123', 'Female', 'Canada', '', 'Hey there!', 'ja@test.com', '123456');
 INSERT INTO COMMUNITIES VALUES (1, 'Sample Community', null, 'Testing123', 'asdf', '1');
 INSERT INTO POSTS VALUES (1, 'Test post 1', 'Lorem Ipsum', '2020-03-27', 1, 1);
 INSERT INTO POSTS VALUES (2, 'Test post 2', 'Lorem Ipsummmm', '2020-03-27', 1, 1);
 INSERT INTO POSTS VALUES (3, '123', 'abc', '2020-03-27', 1, 1);
 INSERT INTO POSTS VALUES (4, '1 fish', '2 fish', '2020-03-27', 1, 1);
 INSERT INTO POSTS VALUES (5, 'red fish', 'blue fish', '2020-03-27', 1, 1);
+INSERT INTO MESSAGES VALUES (NULL, 'testing', '2020-04-1', 1, 2);
+INSERT INTO MESSAGES VALUES (NULL, '123', '2020-04-1', 2, 1);
 
 INSERT INTO users VALUES (1, 'mkyong', 'mkyong@gmail.com');
 INSERT INTO users VALUES (2, 'alex', 'alex@yahoo.com');
