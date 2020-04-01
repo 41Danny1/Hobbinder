@@ -80,17 +80,20 @@
 
 	</div>
       </div>
-      <div class="row" style="margin-top: 15px;">
-	<div class="col-12">
-	  <div class="input-group">
-	    <input type="text" class="form-control">
-	    <div class="input-group-append">
-	      <button class="btn hobbinderButton" type="button"><i class="fab fa-telegram-plane"></i>
 
-</button>
-	    </div>
+      <div class="row" style="margin-top: 15px;">
+	  <div class="col-12">
+	      <form:form modelAttribute="messageInfo" method="POST" action="">
+		  <div class="input-group">
+		      <form:input path="content" cssClass="form-control" />
+		      <div class="input-group-append">
+			  <form:button class="btn hobbinderButton">
+			      <i class="fab fa-telegram-plane"></i>
+			  </form:button>
+		      </div>
+		  </div>
+	      </form:form>
 	  </div>
-	</div>
       </div>
     </div>
 
