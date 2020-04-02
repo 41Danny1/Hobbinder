@@ -39,7 +39,7 @@ public class UserHobbinderDAOImpl implements UserHobbinderDAO {
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("UserID", userID);
 		
-		String sql = "SELECT * FROM HOB_USERS WHERE UsersID = :UsersID";
+		String sql = "SELECT * FROM HOB_USERS WHERE UserID = :UserID";
 		List<UsersHobbinder> result = namedParameterJdbcTemplate.query(sql, params, new UsersHobbinderMapper());
 		return result;
 	}
@@ -76,8 +76,10 @@ public class UserHobbinderDAOImpl implements UserHobbinderDAO {
 			userHobbinder.setUserName(resultSet.getString("UserName"));
 			userHobbinder.setGender(resultSet.getString("Gender"));
 			userHobbinder.setCountry(resultSet.getString("Country"));
-			userHobbinder.setUserImage(resultSet.getString("UserImage"));
-			userHobbinder.setUserDescription(resultSet.getString("UserDescription"));
+			if(resultSet.getString("UserImage") != null)
+				userHobbinder.setUserImage(resultSet.getString("UserImage"));
+			if(resultSet.getString("UserDescription") != null)
+				userHobbinder.setUserDescription(resultSet.getString("UserDescription"));
 			userHobbinder.setEmail(resultSet.getString("Email"));
 			userHobbinder.setPassword(resultSet.getString("Password"));
 			return userHobbinder;

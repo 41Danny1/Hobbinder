@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.cupojava.hobbinder.dao.UserHobbinderDAO;
+import com.cupojava.hobbinder.model.Header;
 import com.cupojava.hobbinder.model.LoginHobbinder;
 import com.cupojava.hobbinder.model.UsersHobbinder;
 
@@ -28,23 +29,27 @@ public class LoginHobbinderController {
 	}
 	
 	@GetMapping("/userLogin")
-	public String login(HttpSession session) {
+	public String login(HttpSession session, Model model) {
+		Header header = new Header();
+		model.addAttribute("headerTemplate", header);
 		UsersHobbinder usersHobbinder = (UsersHobbinder) session.getAttribute("usersHobbinder");
 		if(usersHobbinder != null) {
-			return "home";
+			return "redirect:/home";
 		}
 		return "userLogin";
 	}
 	
 	@PostMapping("/userLogin")
 	public String login(@ModelAttribute("loginHobbinder") LoginHobbinder loginHobbinder, Model model) {
+		Header header = new Header();
+		model.addAttribute("headerTemplate", header);
 		UsersHobbinder usersHobbinder = userHobbinderDao.findByEmail(loginHobbinder.getEmail());
 		model.addAttribute("message", "Login Fail");
 		
 		if(usersHobbinder != null && usersHobbinder.getPassword().equals(loginHobbinder.getPassword())) {
 			model.addAttribute("usersHobbinder", usersHobbinder);
 			model.addAttribute("message", "Login Successfull");
-			return "home";
+			return "redirect:/home";
 		}
 		return "userLogin";
 	}

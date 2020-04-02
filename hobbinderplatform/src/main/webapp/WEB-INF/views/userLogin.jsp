@@ -28,7 +28,7 @@
       
 	<div class="col-12" style="border: 1px solid #DDDDDD; border-radius: .25rem;">
 	
-	<form:form action="home" modelAttribute="loginHobbinder" style="margin-top: 15px;"  method="post" >
+	<form:form modelAttribute="loginHobbinder" style="margin-top: 15px;"  method="post" >
 	    <div class="form-group">
 	      <label>Username</label>
 	      <form:input path="Email" class="form-control" id="Email" placeholder="Enter your Email"/>

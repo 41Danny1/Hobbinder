@@ -45,7 +45,7 @@ public class RegisterUserHobbinderController {
 				userHobbinder.getUserName(), userHobbinder.getGender(), userHobbinder.getCountry(), 
 				userHobbinder.getUserImage(), userHobbinder.getUserDescription(), 
 				userHobbinder.getEmail(), userHobbinder.getPassword());
-		return "userLogin";
+		return "redirect:/userLogin";
 		
 	}
 	
