@@ -71,6 +71,7 @@ public class UserHobbinderDAOImpl implements UserHobbinderDAO {
 	private static final class UsersHobbinderMapper implements RowMapper<UsersHobbinder> {
 		public UsersHobbinder mapRow(ResultSet resultSet, int rowNum) throws SQLException {
 			UsersHobbinder userHobbinder = new UsersHobbinder();
+			userHobbinder.setUserID(resultSet.getLong("UserID"));
 			userHobbinder.setFirstName(resultSet.getString("FirstName"));
 			userHobbinder.setLastName(resultSet.getString("LastName"));
 			userHobbinder.setUserName(resultSet.getString("UserName"));

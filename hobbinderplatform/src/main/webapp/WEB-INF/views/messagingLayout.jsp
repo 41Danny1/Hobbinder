@@ -59,6 +59,11 @@
 	  color: white;
       }
     </style>
+    <script>
+     window.onload = function(){
+	 document.getElementById("content").focus();
+     }
+    </script>
   </head>
   <body>
 
@@ -69,35 +74,31 @@
 	<div class="col-12 msgInfo">
 	  <div style="width: 48px; height: 48px; background-color: orange; float: left; margin-right: 15px;"></div>
 	  <div style="height: 48px; padding: 10px 0;">
-	    NAME
+	    ${recipient}
 	  </div>
 	</div>
       </div>
       <div class="row">
 	<div class="col-12">
 
-	  <div class="msgLeft">test</div>
-	  <div class="msgLeftInfo">20:18</div>
-	  <div class="msgRight">123</div>
-	  <div class="msgRightInfo">20:19</div>
-	  <div class="msgRight">Hello hello</div>
-	  <div class="msgRightInfo">20:19</div>
-	  <div class="msgLeft">test222</div>
-	  <div class="msgLeftInfo">20:20</div>
+	  ${messages}
 
 	</div>
       </div>
-      <div class="row" style="margin-top: 15px;">
-	<div class="col-12">
-	  <div class="input-group">
-	    <input type="text" class="form-control">
-	    <div class="input-group-append">
-	      <button class="btn hobbinderButton" type="button"><i class="fab fa-telegram-plane"></i>
 
-</button>
-	    </div>
+      <div class="row" style="margin-top: 15px;">
+	  <div class="col-12">
+	      <form:form modelAttribute="messageInfo" method="POST" action="">
+		  <div class="input-group">
+		      <form:input path="content" cssClass="form-control" />
+		      <div class="input-group-append">
+			  <form:button class="btn hobbinderButton">
+			      <i class="fab fa-telegram-plane"></i>
+			  </form:button>
+		      </div>
+		  </div>
+	      </form:form>
 	  </div>
-	</div>
       </div>
     </div>
 

@@ -70,7 +70,7 @@ public class Post {
 				"		</div>\n" + 
 				"	      </div>\n" + 
 				"	      <div class='row noPadding'> <!-- Preview content -->\n" + 
-				"		<div class='col-12 noPadding'>\n" + 
+				"		<div class='col-12 noPadding previewContent'>\n" + 
 				"		  <div class='previewToolbar'> <!-- Preview toolbar -->\n" + 
 				"		    <a href='#' class=''><i class='far fa-thumbs-up'></i> Like</a>&nbsp&nbsp\n" + 
 				"		    <a href='#' class=''><i class='far fa-bookmark'></i> Save</a>&nbsp&nbsp\n" + 
