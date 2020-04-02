@@ -77,8 +77,10 @@ public class UserHobbinderDAOImpl implements UserHobbinderDAO {
 			userHobbinder.setUserName(resultSet.getString("UserName"));
 			userHobbinder.setGender(resultSet.getString("Gender"));
 			userHobbinder.setCountry(resultSet.getString("Country"));
-			userHobbinder.setUserImage(resultSet.getString("UserImage"));
-			userHobbinder.setUserDescription(resultSet.getString("UserDescription"));
+			if(resultSet.getString("UserImage") != null)
+				userHobbinder.setUserImage(resultSet.getString("UserImage"));
+			if(resultSet.getString("UserDescription") != null)
+				userHobbinder.setUserDescription(resultSet.getString("UserDescription"));
 			userHobbinder.setEmail(resultSet.getString("Email"));
 			userHobbinder.setPassword(resultSet.getString("Password"));
 			return userHobbinder;
