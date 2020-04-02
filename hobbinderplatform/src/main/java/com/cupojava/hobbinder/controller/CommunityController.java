@@ -63,30 +63,4 @@ public class CommunityController {
         return "communityCreation";  
     }
 	
-//	@RequestMapping(value = "/community", method = RequestMethod.GET)
-//	   public ModelAndView communityType() {
-//	      community Community = new community();	  
-//		  Community.setType((new String []{"Public","Private"}));
-//		  ModelAndView modelAndView = new ModelAndView("Community", "command", Community);
-//		  return modelAndView;
-//	   }
-//	
-//	@RequestMapping(value = "/addType", method = RequestMethod.POST)
-//	   public String addType(@ModelAttribute("SpringWeb")community Community, 
-//	      ModelMap model) {
-//	      model.addAttribute("username", Community.getType());
-//	      
-//	      return "community";
-//	   }
-//	
-//	@ModelAttribute("webFrameworkList")
-//	   public List<String> getWebFrameworkList()
-//	   {
-//	      List<String> webFrameworkList = new ArrayList<String>();
-//	      webFrameworkList.add("Spring MVC");
-//	      webFrameworkList.add("Struts 1");
-//	      webFrameworkList.add("Struts 2");
-//	      webFrameworkList.add("Apache Wicket");
-//	      return webFrameworkList;
-//	   }
 }
