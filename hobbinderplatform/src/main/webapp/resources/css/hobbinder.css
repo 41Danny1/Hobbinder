@@ -28,3 +28,22 @@ a.defLinks:hover{
 a.noDecor:hover{
     text-decoration: none;
 }
+.container {
+	font-family: "Roboto" !important;
+	font-size: 18px !important;
+	letter-spacing: 2px !important;
+	font-weight: 400 !important;
+	line-height: 24px !important;
+	background-color: #f4f4f4 !important;
+  }
+  
+ h2 {
+  	color: #f45200;
+  	text-align: center;
+  }
+  
+ footer {
+ 	margin-top: 30px;
+ }
+
+}

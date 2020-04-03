@@ -13,12 +13,12 @@ CREATE TABLE HOB_USERS (
 	FirstName VARCHAR(50), 
 	LastName VARCHAR(50), 
 	UserName VARCHAR(30), 
-	Email VARCHAR(50),
-	Password VARCHAR(50), 
 	Gender VARCHAR(15), 
 	Country VARCHAR(30), 
 	UserImage VARCHAR(50), 
-	UserDescription VARCHAR(500)
+	UserDescription VARCHAR(200),
+	Email VARCHAR(50),
+	Password VARCHAR(50)
 );
 
 CREATE TABLE COMMUNITIES (

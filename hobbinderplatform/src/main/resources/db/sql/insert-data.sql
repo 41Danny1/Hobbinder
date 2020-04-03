@@ -18,19 +18,19 @@ INSERT INTO courses VALUES('CSIS1275', 'Introduction to Programming 2');
 
 INSERT INTO registrations VALUES('wongi5@douglascollege.ca', 'CSIS1275');
 
-INSERT INTO HOB_USERS 
+INSERT INTO HOB_USERS('UserID', 'FirstName', 'LastName', 'UserName', 'Email', 'Password','Gender','Country', 'UserImage', 'UserDescription')
 VALUES (null, 'HARUKA', 'KOTANI', 'HARUKA123', 'HARUKA@GMAIL.COM', '1111', 'MALE', 'CANADA', '', 'FROM JAPAN');
 
-INSERT INTO HOB_USERS 
+INSERT INTO HOB_USERS('UserID', 'FirstName', 'LastName', 'UserName', 'Email', 'Password','Gender','Country', 'UserImage', 'UserDescription')
 VALUES (null, 'Danny', 'Guo', '41Danny1', 'danny@GMAIL.COM', '1111', 'MALE', 'CANADA', '', 'FROM Canada');
 
-INSERT INTO HOB_USERS 
+INSERT INTO HOB_USERS('UserID', 'FirstName', 'LastName', 'UserName', 'Email', 'Password','Gender','Country', 'UserImage', 'UserDescription')
 VALUES (null, 'Alfred', 'Riantho', 'Alred4', 'alfred@GMAIL.COM', '1111', 'MALE', 'CANADA', '', 'FROM Indonesia');
 
-INSERT INTO HOB_USERS 
+INSERT INTO HOB_USERS('UserID', 'FirstName', 'LastName', 'UserName', 'Email', 'Password','Gender','Country', 'UserImage', 'UserDescription')
 VALUES (null, 'Juliana', 'Takase', 'Juliana11', 'juliana@GMAIL.COM', '1111', 'FEMALE', 'CANADA', '', 'FROM Brazil');
 
-INSERT INTO HOB_USERS 
+INSERT INTO HOB_USERS('UserID', 'FirstName', 'LastName', 'UserName', 'Email', 'Password','Gender','Country', 'UserImage', 'UserDescription')
 VALUES (null, 'Jeff', 'Bezos', 'Jeff55', 'jeff@GMAIL.COM', '1111', 'MALE', 'CANADA', '', 'FROM Amazon');
 
 INSERT INTO USER_FOLLOWERS
@@ -64,5 +64,7 @@ VALUES (5, 1);
 INSERT INTO USER_FOLLOWING
 VALUES (6, 1);
 
+INSERT INTO HOB_USERS (FirstName, LastName, UserName, Gender, Country, UserImage, UserDescription, Email, Password) VALUES('Juliana', 'Takase', 'julianatakase', 'female', 'Brazil', 'image.jpg', 'hlkjhlkjlkjlkj', 'juliana@juliana.com', '123456');
+INSERT INTO HOB_USERS (FirstName, LastName, UserName, Gender, Country, UserImage, UserDescription, Email, Password) VALUES('Marcos', 'Barros', 'marcosbarros', 'male', 'Brazil', 'image.jpg', 'hlkjhlkjlkjlkj', 'marcos@marcos.com', '123456');
 
 
