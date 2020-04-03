@@ -1,10 +1,18 @@
 package com.cupojava.hobbinder.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.cupojava.hobbinder.dao.UserHobbinderDAO;
+
 public class Post {
+	
+	@Autowired
+	UserHobbinderDAO userDao;
 
 	private String title;
 	private String content;
 	private String date;
+	private String time;
 	private int communityID;
 	private int authorID;
 	private String render;
@@ -41,9 +49,26 @@ public class Post {
 		this.authorID = authorID;
 		
 	}
+	public String getAuthor() {
+		return author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	public String getTime() {
+		return time;
+	}
+	public void setTime(String time) {
+		this.time = time;
+	}
 	
 	public String render() {
 		String render;
+		if(author == null)
+			author = "ID : "+authorID;
+		
+		time = "TIME"; //Hard coded for now
+		
 		render = "<div class='row postRow'> <!-- A post -->\n" + 
 				"	    <div class='col-12'>\n" + 
 				"	      <div class='row'> \n" + 
@@ -59,9 +84,9 @@ public class Post {
 				"		    <br>\n" + 
 				"		    <a href='#' class='postLinks'><i class='fas fa-chevron-down'></i></a>\n" + 
 				"		    <a href='#' class='postLinks'>\n" + 
-				"		      "+authorID+"\n" + 
+				"		      "+author+"\n" + 
 				"		    </a>\n" + 
-				"		    - "+date+", TIME\n" + 
+				"		    - "+date+", "+time+"\n" + 
 				"		  </div>\n" + 
 				"		</div>\n" + 
 				"		<div class='col-sm-4 lastPost'>\n" + 
