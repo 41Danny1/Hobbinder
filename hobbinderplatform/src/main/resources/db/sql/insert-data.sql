@@ -1,4 +1,4 @@
-INSERT INTO HOB_USERS VALUES(1, 'John', 'Smith', 'js123','js@test.com', '123456', 'Male', 'Canada', null, 'Hi there! I love spending the weekend outside exploring the area, BBQing with friends, and harassing my dog.');
+INSERT INTO HOB_USERS VALUES(1, 'John', 'Smith', 'js123', 'Male', 'Canada', '', 'Hello there!', 'js@test.com', '123456');
 INSERT INTO COMMUNITIES VALUES (1, 'Sample Community', null, 'Testing123', 'asdf', '1');
 INSERT INTO POSTS VALUES (1, 'Test post 1', 'Lorem Ipsum', '2020-03-27', 1, 1);
 INSERT INTO POSTS VALUES (2, 'Test post 2', 'Lorem Ipsummmm', '2020-03-27', 1, 1);
@@ -18,20 +18,11 @@ INSERT INTO courses VALUES('CSIS1275', 'Introduction to Programming 2');
 
 INSERT INTO registrations VALUES('wongi5@douglascollege.ca', 'CSIS1275');
 
-INSERT INTO HOB_USERS('UserID', 'FirstName', 'LastName', 'UserName', 'Email', 'Password','Gender','Country', 'UserImage', 'UserDescription')
-VALUES (null, 'HARUKA', 'KOTANI', 'HARUKA123', 'HARUKA@GMAIL.COM', '1111', 'MALE', 'CANADA', '', 'FROM JAPAN');
-
-INSERT INTO HOB_USERS('UserID', 'FirstName', 'LastName', 'UserName', 'Email', 'Password','Gender','Country', 'UserImage', 'UserDescription')
-VALUES (null, 'Danny', 'Guo', '41Danny1', 'danny@GMAIL.COM', '1111', 'MALE', 'CANADA', '', 'FROM Canada');
-
-INSERT INTO HOB_USERS('UserID', 'FirstName', 'LastName', 'UserName', 'Email', 'Password','Gender','Country', 'UserImage', 'UserDescription')
-VALUES (null, 'Alfred', 'Riantho', 'Alred4', 'alfred@GMAIL.COM', '1111', 'MALE', 'CANADA', '', 'FROM Indonesia');
-
-INSERT INTO HOB_USERS('UserID', 'FirstName', 'LastName', 'UserName', 'Email', 'Password','Gender','Country', 'UserImage', 'UserDescription')
-VALUES (null, 'Juliana', 'Takase', 'Juliana11', 'juliana@GMAIL.COM', '1111', 'FEMALE', 'CANADA', '', 'FROM Brazil');
-
-INSERT INTO HOB_USERS('UserID', 'FirstName', 'LastName', 'UserName', 'Email', 'Password','Gender','Country', 'UserImage', 'UserDescription')
-VALUES (null, 'Jeff', 'Bezos', 'Jeff55', 'jeff@GMAIL.COM', '1111', 'MALE', 'CANADA', '', 'FROM Amazon');
+INSERT INTO HOB_USERS VALUES(null, 'HARUKA', 'KOTANI', 'HARUKA123', 'FEMALE', 'Canada', '', 'FROM JAPAN', 'haruka@test.com', '123456');
+INSERT INTO HOB_USERS VALUES(null, 'Danny', 'Guo', '41Danny1', 'Male', 'Canada', '', 'FROM Canada', 'danny@gmail.com', '123456');
+INSERT INTO HOB_USERS VALUES(null, 'Alfred', 'Riantho', 'Alred4', 'Male', 'Canada', '', 'FROM Indonesia', 'alfred@gmail.com', '123456');
+INSERT INTO HOB_USERS VALUES(null, 'Juliana', 'Takase', 'Juliana11', 'FEMALE', 'Canada', '', 'FROM Brazil', 'juliana@gmail.com', '123456');
+INSERT INTO HOB_USERS VALUES(null, 'Jeff', 'Bezos', 'Jeff55', 'Male', 'Canada', '', 'FROM Amazon', 'jeff@gmail.com', '123456');
 
 INSERT INTO USER_FOLLOWERS
 VALUES (2, 1);
