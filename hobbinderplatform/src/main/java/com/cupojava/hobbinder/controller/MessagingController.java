@@ -42,7 +42,7 @@ public class MessagingController {
 
 		UsersHobbinder user;
 		// System.out.println(session.getAttribute("usersHobbinder"));
-		user = userHobbinderDao.findByEmail("js@test.com");  //Hardcoded user 1
+		user = (UsersHobbinder)session.getAttribute("usersHobbinder");
 		UsersHobbinder recipientUser = userHobbinderDao.findUsersHobbinder(id).get(0);
 
 		List<PrivateMessage> messages = pmDao.findMessagesByUser(Integer.parseInt(user.getUserID().toString()), id);
@@ -64,7 +64,9 @@ public class MessagingController {
 	@PostMapping(value = "/messaging", params = "id")
     public String handlerSend(@ModelAttribute("messageInfo") PrivateMessage msgToSend, int id, HttpSession session, Model model) {
 		
-		pmDao.sendMessage(msgToSend.getContent(), 1, id, "2020-04-01", "");
+		UsersHobbinder user = (UsersHobbinder)session.getAttribute("usersHobbinder");
+		
+		pmDao.sendMessage(msgToSend.getContent(), Integer.parseInt(user.getUserID().toString()), id, "2020-04-01", "");
 		
 		return "redirect:/messaging?id="+id;
     }
