@@ -608,13 +608,10 @@
 		width: 10%;
 	}
 	
-	#profile_images{
-	  position: absolute;
- 	  left: 50%;
-  	  top: 50%;
+	#user_button{
+	  height: 500px;
 	}
 	
 
-	
   }
   

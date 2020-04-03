@@ -38,7 +38,7 @@ public class ProfileController {
 		model.addAttribute("profile", users);
 		
 		String gallery = "";
-		for(int i=1; i< 21; i++)
+		for(int i=1; i< 5; i++)
 			gallery += "<div class=\"rela-inline image\" style=\"background-image: url('resources/images/image" + i + ".jpg');\"></div>";
 		model.addAttribute("gallery", gallery);
 
