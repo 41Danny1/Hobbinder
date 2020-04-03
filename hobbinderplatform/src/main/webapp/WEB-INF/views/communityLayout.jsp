@@ -10,8 +10,10 @@
     <link href="<c:url value="/resources/css/hobbinder.css" />"
 	rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="resources/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,400|Yellowtail" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3e471b317e.js" crossorigin="anonymous"></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="resources/js/feedUtilities.js"></script>
     <style>
       .lastPost{
 	  text-align: right;

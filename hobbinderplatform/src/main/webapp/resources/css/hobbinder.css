@@ -28,6 +28,9 @@ a.defLinks:hover{
 a.noDecor:hover{
     text-decoration: none;
 }
+.noShow{
+    display: none !important;
+}
 .container {
 	font-family: "Roboto" !important;
 	font-size: 18px !important;
