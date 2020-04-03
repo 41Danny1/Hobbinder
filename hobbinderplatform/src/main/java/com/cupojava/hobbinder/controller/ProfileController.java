@@ -25,19 +25,22 @@ public class ProfileController {
 		
 		String users = "";
 		List<com.cupojava.hobbinder.model.Profile> userObjects = profileDao.findUserByUserID(1);
-		
-		for(int i=0; i<userObjects.size(); i++)
-			users += userObjects.get(i).render();
-		
 		List<com.cupojava.hobbinder.model.Profile> followerObject = profileDao.getNumOfFollower(1);
 		List<com.cupojava.hobbinder.model.Profile> followingObject = profileDao.getNumOfFollowing(1);
 		List<com.cupojava.hobbinder.model.Profile> communityObject = profileDao.getNumOfCommunities(1);
+
+		userObjects.get(0).setNumOfFollowers(followerObject.size());
+		userObjects.get(0).setNumOfFollowing(followingObject.size());
+		userObjects.get(0).setNumOfCommunities(communityObject.size());
 		
-		Profile.numOfFollowers = followerObject.size();
-		Profile.numOfFollowing = followingObject.size();
-		Profile.numOfCommunities = communityObject.size();
+		users = userObjects.get(0).render();
 	
 		model.addAttribute("profile", users);
+		
+		String gallery = "";
+		for(int i=1; i< 21; i++)
+			gallery += "<div class=\"rela-inline image\" style=\"background-image: url('resources/images/image" + i + ".jpg');\"></div>";
+		model.addAttribute("gallery", gallery);
 
 		return "profile";
 	}

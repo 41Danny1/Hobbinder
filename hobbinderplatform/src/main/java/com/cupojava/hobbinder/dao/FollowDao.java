@@ -9,4 +9,5 @@ public interface FollowDao {
 	
 	List<Follow> findFollowerByUser(int followID);
 	List<Follow> findFollowingByUser(int followID);
+
 }

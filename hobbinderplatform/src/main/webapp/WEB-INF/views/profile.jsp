@@ -63,16 +63,10 @@
         
         
         
-        <div 
-        class="rela-block content"><div class="rela-inline image" ></div><div class="rela-inline image"></div><div class="rela-inline 
-        image"></div><div class="rela-inline image"></div><div class="rela-inline image"></div><div class="rela-inline 
-        image"></div><div class="rela-inline image"></div><div class="rela-inline image"></div><div class="rela-inline 
-        image"></div><div class="rela-inline image"></div><div class="rela-inline image"></div><div class="rela-inline 
-        image"></div><div class="rela-inline image"></div><div class="rela-inline image"></div><div class="rela-inline 
-        image"></div><div class="rela-inline image"></div><div class="rela-inline image"></div><div class="rela-inline 
-        image"></div><div class="rela-inline image"></div><div class="rela-inline image"></div><div class="rela-inline 
-        image"></div><div class="rela-inline image"></div><div class="rela-inline image"></div><div class="rela-inline 
-        image"></div></div><div class="rela-inline button more-images" onclick="add_images(); inf_scroll = true;">More 
+        <div class="rela-block content">
+        ${gallery}
+        </div>
+        <div class="rela-inline button more-images" onclick="add_images(); inf_scroll = true;">More 
         Images</div></div><div class="rela-block footer"><p></p><br><br></div>
 
 

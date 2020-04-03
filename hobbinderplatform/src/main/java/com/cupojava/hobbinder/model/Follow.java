@@ -7,6 +7,7 @@ public class Follow {
 	private String lastName;
 	private String description;
 	
+
 	
 	public String getUserName() {
 		return userName;
@@ -39,21 +40,30 @@ public class Follow {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
+	public String test() {
+		String test;
+		test = "";
+		
+		return test;
+	}
+	
 
 	
 	public String render() {
 		String render;
-		render = "<div id=\"follower_table\">\n" + 
-				"         <div class=\"row\">\n" + 
+		render = " "
+				+ "<div id=\"follower_table\">" + 
+				"         <div class=\"row\">" + 
 				"               <div class=\"col-2\">\n" + 
 				"                      <a href=\"\" ><img src=\"resources/images/profile.png\"alt=\"profile_image\" width=\"120px\" height=\"120px\"></a>\n" + 
 				"                  </div>\n" + 
 				"                  <div class=\"col-8\">\n" + 
 				"                   <a href=\"\"><p class=\"user_name\">" + firstName + " " + lastName + "</p></a>\n" + 
-				"                   <p class=\"user_id\">@" + userName + "</p> \n" + 
-				"                   <p class=\" + \">" + description + "</p>\n" + 
-				"                  </div>  \n" + 
-				"                </div>  \n" + 
+				"                   <p class=\"user_id\">@" + userName + "</p> " + 
+				"                   <p class=\" + \">" + description + "</p>" + 
+				"                  </div> " + 
+				"                </div>" + 
 				"              </div>";
 		
 		return render;

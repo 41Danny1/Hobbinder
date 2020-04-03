@@ -11,6 +11,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import com.cupojava.hobbinder.model.Follow;
 import com.cupojava.hobbinder.model.Profile;
 
 @Repository
@@ -30,8 +31,7 @@ public class ProfileDaoImp implements ProfileDao {
 		params.put("id", userID);	
     
         String sql = "SELECT * FROM HOB_USERS where userID=:id;";
-        
-        
+       
         List<Profile> results = namedParameterJdbcTemplate.query(sql, params, new ProfileMapper());
        
         
@@ -43,10 +43,12 @@ public class ProfileDaoImp implements ProfileDao {
 
 		public Profile mapRow(ResultSet rs, int rowNum) throws SQLException {
 			Profile profile = new Profile();
+			Follow follow = new Follow();
 			
 			profile.setFirstName(rs.getString("FirstName"));
 			profile.setLastName(rs.getString("LastName"));
 			profile.setUserName(rs.getString("UserName"));
+			follow.setUserName(rs.getString("UserName"));
 			profile.setDescription(rs.getString("UserDescription"));
 			
 			
@@ -63,8 +65,6 @@ public class ProfileDaoImp implements ProfileDao {
         String sql = "SELECT * FROM HOB_USERS AS u \n" + 
         		"JOIN USER_FOLLOWERS AS f \n" + 
         		"ON u.UserID = f.followerID where f.userID=:id;";
-        
-        System.out.println(sql);
         
         
         List<Profile> results = namedParameterJdbcTemplate.query(sql, params, new ProfileMapper());
