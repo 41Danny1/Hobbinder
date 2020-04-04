@@ -64,12 +64,10 @@
 
         <div class="rela-block container"><div class="rela-block profile-card"><ul class="mdc-list">
             <!-- <div class="container"> -->
-              <div class="top_follow">
-                <p><a href="profile.html"><font color="#f45200"></font>@HarukaKotani</font></a></p>
-                <font color="#f45200">Followers</font></a>/<a href="profile_following.html">Following</a>
-              </div>
-              
-              ${users}
+            
+            ${visitedUser2} 
+                        
+            ${users}
               
               <!-- <div class="rela-block 
         profile-name-container"> -->

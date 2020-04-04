@@ -72,7 +72,7 @@ public class Profile {
 		this.numOfCommunities = numOfCommunities;
 	}
 
-	public String render() {
+	public String render(int id) {
 		String render;
 		render = "  <div class=\"rela-block container\">" + 
 				"        <div class=\"rela-block profile-card\"><div class=\"profile-pic\" id=\"profile_pic\" style=\"background-image: url(resources/images/john.jpeg)\"></div>" + 
@@ -85,10 +85,10 @@ public class Profile {
 				"        profile-stat works\" id=\"num_works\"><a href=\"url\">" + 
 				"        		<font color=\"#f45200\">" + numOfCommunities + "</font></a><br></div>" + 
 				"        				<div class=\"floated profile-stat followers" + 
-				"        id=\"num_followers\"><a href=\"profile_followers.html\">" + 
+				"        id=\"num_followers\"><a href=\"profile_followers?id=" + id + "\">" + 
 				"        <font color=\"#f45200\">" + numOfFollowers + "</font></a><br>" + 
 				"        </div><div class=\"floated profile-stat following\" id=\"num_following\">" + 
-				"        <a href=\"profile_following.html\">" + 
+				"        <a href=\"profile_following?id=" + id + "\">" + 
 				"        <font color=\"#f45200\">" + numOfFollowing + "</font></a><br></div></div></div>";
 		
 		return render;

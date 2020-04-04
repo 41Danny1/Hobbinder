@@ -66,10 +66,9 @@
         
         <div class="rela-block profile-card"><ul class="mdc-list">
             <!-- <div class="container"> -->
-              <div class="top_follow">
-                <p><a href="profile.html"><font color="#f45200"></font>@HarukaKotani</font></a></p>
-                <a href="profile_followers.html">Followers</a>/<font color="#f45200">Following</font>
-              </div>
+
+            ${visitedUser} 
+            
               
               ${users}
               
