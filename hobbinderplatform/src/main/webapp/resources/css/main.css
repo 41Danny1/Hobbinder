@@ -424,7 +424,7 @@
 	height: 100%;
 	width: 33.3333%;
   }
-  .profile-stat:after {
+  .profile-stat:after{
 	color: #999;
   }
   .works::after {
@@ -447,8 +447,8 @@
 	box-shadow: 0 2px 6px -2px rgba(0,0,0,0.26);
 	background-color: rgba(0,0,0,0.4);
 	background-size: cover !important;
-	-webkit-transition: 0.2s cubic-bezier(0.5, 0, 0.2, 1);
-	transition: 0.2s cubic-bezier(0.5, 0, 0.2, 1);
+	/* -webkit-transition: 0.2s cubic-bezier(0.5, 0, 0.2, 1); */
+	/* transition: 0.2s cubic-bezier(0.5, 0, 0.2, 1); */
   }
   .image:hover {
 	-webkit-transform: scale(1.06);
@@ -606,6 +606,10 @@
 	.follower_image{
 		height: 10%;
 		width: 10%;
+	}
+	
+	#user_button{
+	  height: 500px;
 	}
 	
 	.input-form {

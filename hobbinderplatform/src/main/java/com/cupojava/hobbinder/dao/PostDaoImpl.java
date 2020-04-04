@@ -45,9 +45,9 @@ public class PostDaoImpl implements PostDao {
         return results;
 	}
 	
-	public List<Post> findRandomPosts(int ID) {
+	public List<Post> findRandomPosts() {
 		Map<String, Object> params = new HashMap<String, Object>();
-        params.put("id", ID);	
+ 
         
         String sql = "SELECT * FROM POSTS";
         List<Post> results = namedParameterJdbcTemplate.query(sql, params, new PostMapper());

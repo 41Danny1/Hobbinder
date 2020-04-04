@@ -20,11 +20,11 @@
             <!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
             <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
         </head>
-    
 
 <body>
 
-  <div class="overlay"><div class="abs-center overlay-card">
+  <div class="overlay">
+  <div class="abs-center overlay-card">
     <div class="close">X</div><div class="floated overlay-image">
             <div class="abs-center post-image"></div></div>
             <div class="floated overlay-desc">
@@ -33,8 +33,8 @@
                     <div class="rela-block desc-desc"></div></div></div></div>
             <div class="nav-bar">
                     <div class="horz-center nav-container">
-                            <div class="floated logo">
-                              <a href="home.html"><font color="#f45200">Hobbinder</font></a></div>
+                           <div class="floated logo">
+                             <a href="home.html"><font color="#f45200">Hobbinder</font></a></div>
             <ul class="floated nav-div nav-links">
                     <li class="rela-inline"><a href="home.html">Home</a></li>
                     <li class="rela-inline"><a href="">Community</a></li>
@@ -68,77 +68,11 @@
                 <p><a href="profile.html"><font color="#f45200"></font>@HarukaKotani</font></a></p>
                 <font color="#f45200">Followers</font></a>/<a href="profile_following.html">Following</a>
               </div>
-              <div id="follower_table">
-                <div class="row">
-                  <div class="col-2">
-                      <a href="" ><img src="resources/images/profile.png" alt="profile_image" width="120px" height="120px"></a>
-                  </div>
-                  <div class="col-8">
-                   <a href=""><p class="user_name">Carolyn Oliver</p></a>
-                   <p class="user_id">@Carolyn_Oliver</p> 
-                   <p class="user_description">user discription here </p>
-                  </div>  
-                </div>
-
-                <div class="row">
-                  <div class="col-2">
-                      <a href="" ><img src="resources/images/profile.png" alt="profile_image" width="120px" height="120px"></a>
-                  </div>
-                  <div class="col-8">
-                   <a href=""><p class="user_name">Carolyn Oliver</p></a>
-                   <p class="user_id">@Carolyn_Oliver</p>
-                   <p class="user_description">user discription here </p>
-                  </div>  
-                </div>
-
-                <div class="row">
-                  <div class="col-2">
-                      <a href="" ><img src="resources/images/profile.png" alt="profile_image" width="120px" height="120px"></a>
-                  </div>
-                  <div class="col-8">
-                   <a href=""><p class="user_name">Carolyn Oliver</p></a>
-                   <p class="user_id">@Carolyn_Oliver</p>
-                   <p class="user_description">user discription here </p>
-                  </div>  
-                </div>
-
-                <div class="row">
-                  <div class="col-2">
-                      <a href="" ><img src="resources/images/profile.png" alt="profile_image" width="120px" height="120px"></a>
-                  </div>
-                  <div class="col-8">
-                   <a href=""><p class="user_name">Carolyn Oliver</p></a>
-                   <p class="user_id">@Carolyn_Oliver</p>
-                   <p class="user_description">user discription here </p>
-                  </div>  
-                </div>
-
-                <div class="row">
-                  <div class="col-2">
-                      <a href="" ><img src="resources/images/profile.png" alt="profile_image" width="120px" height="120px"></a>
-                  </div>
-                  <div class="col-8">
-                   <a href=""><p class="user_name">Carolyn Oliver</p></a>
-                   <p class="user_id">@Carolyn_Oliver</p>
-                   <p class="user_description">user discription here </p>
-                  </div>  
-                </div>
-
-                <div class="row">
-                  <div class="col-2">
-                      <a href="" ><img src="resources/images/profile.png" alt="profile_image" width="120px" height="120px"></a>
-                  </div>
-                  <div class="col-8">
-                   <a href=""><p class="user_name">Carolyn Oliver</p></a>
-                   <p class="user_id">@Carolyn_Oliver</p>
-                   <p class="user_description">user discription here </p>
-                  </div>  
-                </div>
-           
-              </div>
+              
+              ${users}
+              
               <!-- <div class="rela-block 
         profile-name-container"> -->
-
 
 
 </body>
