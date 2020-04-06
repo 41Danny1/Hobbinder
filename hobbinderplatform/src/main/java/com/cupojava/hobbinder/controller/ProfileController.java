@@ -61,6 +61,8 @@ public class ProfileController {
 	
 	@GetMapping(value = "/profile", params = "id")
 	public String handler2(HttpSession session, Model model, int id) {
+		Header header = new Header();
+		model.addAttribute("headerTemplate", header);
 		
 		int uid = id;
 		
