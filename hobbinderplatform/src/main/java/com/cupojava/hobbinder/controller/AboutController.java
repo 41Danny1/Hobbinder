@@ -36,6 +36,8 @@ public class AboutController {
 
 	@GetMapping("/aboutUs")
 	public String handler1(Model model) {
+		Header header = new Header();
+		model.addAttribute("headerTemplate", header);
 		return "aboutUs";
 	}
 	
