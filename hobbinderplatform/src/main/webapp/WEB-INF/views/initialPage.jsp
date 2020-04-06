@@ -30,7 +30,7 @@
           <div class="col-sm-1">
             <img src="<c:url value="/resources/img/CupoJava.png" />" class="img-circle" alt="CupoJava" style="width:70%">
           </div> 
-          <div class="floated logo" ><font color="#f45200">Welcome to Hobbinder</font></div>
+          <div class="floated logo"><a href="aboutUs"><font color="#f45200">Welcome to Hobbinder</font></a></div>
             <ul class="nav-div nav-links">
             <ul class="floated nav-div" >
               <li class="rela-inline menu-toggle"></li>
