@@ -20,7 +20,8 @@
 
       <div class="row">
 	<div class="col-12">
-	  <h5 style="text-align: center; margin-top: 150px">Report Submitted</h5>
+	  <h2 style="text-align: center; margin-top: 150px">Report Submitted</h2>
+	  <h4 style="text-align: center;">We will evaluate your request and get back to you in 2 business days.</h4>
 	</div>
       </div>
 
