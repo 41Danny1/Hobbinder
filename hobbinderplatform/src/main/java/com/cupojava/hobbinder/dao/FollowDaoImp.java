@@ -45,6 +45,7 @@ public class FollowDaoImp implements FollowDao {
 
 		public Follow mapRow(ResultSet rs, int rowNum) throws SQLException {
 			Follow Follow = new Follow();
+			Follow.setUserID(rs.getLong("UserID"));
 			Follow.setFirstName(rs.getString("FirstName"));
 			Follow.setLastName(rs.getString("LastName"));
 			Follow.setUserName(rs.getString("UserName"));

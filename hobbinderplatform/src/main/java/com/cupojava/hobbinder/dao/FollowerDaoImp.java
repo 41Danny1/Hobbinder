@@ -58,10 +58,7 @@ public class FollowerDaoImp implements FollowerDao {
 				
 			}
 			
-			catch(Exception e) {
-				
-				
-			}
+			catch(Exception e) {}
 			
 			return Follow;
 		}

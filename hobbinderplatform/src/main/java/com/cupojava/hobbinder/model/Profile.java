@@ -75,7 +75,7 @@ public class Profile {
 	public String render(int id) {
 		String render;
 		render = "  <div class=\"rela-block container\">" + 
-				"        <div class=\"rela-block profile-card\"><div class=\"profile-pic\" id=\"profile_pic\" style=\"background-image: url(resources/images/john.jpeg)\"></div>" + 
+				"        <div class=\"rela-block profile-card\"><div class=\"profile-pic\" id=\"profile_pic\" style=\"background-image: url(resources/images/logo.png)\"></div>" + 
 				"        <div class=\"rela-block profile-name-container\">\n" + 
 			   "       <div class=\"rela-block user-name\" id=\"user_name\">" + firstName + "  " + lastName + "</div>@" +  userName + "\n" + 
 				"        <div class=\"user_button\" style=\"padding-top:15px\";><button type=\"button\" class=\"btn btn-outline-secondary\" style=\"width:200px\" >Follow</button></div><div class=\"rela-block " + 

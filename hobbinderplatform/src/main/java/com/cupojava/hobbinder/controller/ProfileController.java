@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.cupojava.hobbinder.dao.FollowDao;
 import com.cupojava.hobbinder.dao.ProfileDao;
 import com.cupojava.hobbinder.model.Follow;
+import com.cupojava.hobbinder.model.Header;
 
 
 @Controller
@@ -27,6 +28,9 @@ public class ProfileController {
 
 	@RequestMapping("/profile")
 	public String handler(HttpSession session, Model model) {
+		Header header = new Header();
+		model.addAttribute("headerTemplate", header);
+
 		
 		UsersHobbinder login = (UsersHobbinder) session.getAttribute("usersHobbinder");
 		

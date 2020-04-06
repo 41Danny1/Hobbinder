@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.cupojava.hobbinder.dao.PostDao;
+import com.cupojava.hobbinder.model.Header;
 import com.cupojava.hobbinder.model.Post;
 import com.cupojava.hobbinder.model.UsersHobbinder;
 
@@ -25,6 +26,9 @@ public class HomeController {
 
 	@RequestMapping("/home")
 	public String handler(HttpSession session,Model model) {
+		
+		Header header = new Header();
+		model.addAttribute("headerTemplate", header);
 		
 		UsersHobbinder login = (UsersHobbinder) session.getAttribute("usersHobbinder");
 		int uid = Integer.parseInt(login.getUserID().toString());

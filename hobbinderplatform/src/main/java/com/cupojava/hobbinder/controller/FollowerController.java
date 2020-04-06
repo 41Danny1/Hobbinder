@@ -20,6 +20,7 @@ import com.cupojava.hobbinder.dao.ProfileDaoImp;
 import com.cupojava.hobbinder.dao.UserHobbinderDAO;
 import com.cupojava.hobbinder.model.Follow;
 import com.cupojava.hobbinder.model.Follower;
+import com.cupojava.hobbinder.model.Header;
 import com.cupojava.hobbinder.model.Post;
 import com.cupojava.hobbinder.model.UsersHobbinder;
 
@@ -36,6 +37,9 @@ public class FollowerController {
 	@RequestMapping(value = "/profile_followers", params= "id")
 	public String handler(HttpSession session, Model model, int id) {
 		
+		Header header = new Header();
+		model.addAttribute("headerTemplate", header);
+
 		int uid = id;
 		
 		String users = "";

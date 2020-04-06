@@ -21,7 +21,7 @@ INSERT INTO courses VALUES('CSIS1275', 'Introduction to Programming 2');
 
 INSERT INTO registrations VALUES('wongi5@douglascollege.ca', 'CSIS1275');
 
-INSERT INTO HOB_USERS VALUES(null, 'HARUKA', 'KOTANI', 'HARUKA123', 'FEMALE', 'Canada', '', 'FROM JAPAN', 'haruka@test.com', '123456');
+INSERT INTO HOB_USERS VALUES(null, 'Haruka', 'Kotani', 'haruka.k28', 'FEMALE', 'Canada', '', 'From Japan', 'haruka@gmail.com', '123456');
 INSERT INTO HOB_USERS VALUES(null, 'Danny', 'Guo', '41Danny1', 'Male', 'Canada', '', 'FROM Canada', 'danny@gmail.com', '123456');
 INSERT INTO HOB_USERS VALUES(null, 'Alfred', 'Riantho', 'Alred4', 'Male', 'Canada', '', 'FROM Indonesia', 'alfred@gmail.com', '123456');
 INSERT INTO HOB_USERS VALUES(null, 'Juliana', 'Takase', 'Juliana11', 'FEMALE', 'Canada', '', 'FROM Brazil', 'juliana@gmail.com', '123456');
