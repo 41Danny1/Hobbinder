@@ -75,7 +75,7 @@ public class Post {
 				"		    <a href='#' class=''><i class='far fa-thumbs-up'></i> Like</a>&nbsp&nbsp\n" + 
 				"		    <a href='#' class=''><i class='far fa-bookmark'></i> Save</a>&nbsp&nbsp\n" + 
 				"		    <a href='#' class=''><i class='fas fa-share'></i> Share</a>&nbsp&nbsp\n" + 
-				"		    <a href='#' class=''><i class='fas fa-flag'></i> Report</a>\n" + 
+				"		    <a href='report' class=''><i class='fas fa-flag'></i> Report</a>\n" + 
 				"		  </div> <!-- End of preview toolbar -->\n" + 
 				"		  <div class='previewBox'>\n" + 
 				"		    <div style='width: 100%; padding: 5px; background-color: #EEEEEE;'>\n" +

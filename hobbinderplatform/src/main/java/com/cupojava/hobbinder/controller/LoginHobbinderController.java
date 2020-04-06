@@ -35,8 +35,9 @@ public class LoginHobbinderController {
 		UsersHobbinder usersHobbinder = (UsersHobbinder) session.getAttribute("usersHobbinder");
 		if(usersHobbinder != null) {
 			return "redirect:/home";
-		}
+		} 
 		return "userLogin";
+		
 	}
 	
 	@PostMapping("/userLogin")
@@ -46,11 +47,13 @@ public class LoginHobbinderController {
 		UsersHobbinder usersHobbinder = userHobbinderDao.findByEmail(loginHobbinder.getEmail());
 		model.addAttribute("message", "Login Fail");
 		
-		if(usersHobbinder != null && usersHobbinder.getPassword().equals(loginHobbinder.getPassword())) {
+		if(usersHobbinder != null && usersHobbinder.getPassword().equals(loginHobbinder.getPassword())
+				&& usersHobbinder.getEmail().equals(loginHobbinder.getEmail())) {
 			model.addAttribute("usersHobbinder", usersHobbinder);
 			model.addAttribute("message", "Login Successfull");
 			return "redirect:/home";
 		}
+		
 		return "userLogin";
 	}
 	

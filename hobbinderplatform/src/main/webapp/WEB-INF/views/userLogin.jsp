@@ -20,7 +20,9 @@
       <div class="register">
       	<div class="row">
 		<br>
-	  		<h2><font color="#f45200">Share. Grow. Inspire.</font></h2>
+	  		<h2><font color="#f45200">Share. Grow. Inspire. </font></h2>
+	  		<br>
+	  		<h2><font color="gray">${message}</font></h2>
       </div>
      </div>
       <br>
@@ -28,16 +30,26 @@
       
 	<div class="col-12" style="border: 1px solid #DDDDDD; border-radius: .25rem;">
 	
-	<form:form modelAttribute="loginHobbinder" style="margin-top: 15px;"  method="post" >
+	<form:form modelAttribute="loginHobbinder" style="margin-top: 15px;"  method="post" action="userLogin">
 	    <div class="form-group">
-	      <label>Username</label>
+	      <label>Email</label>
 	      <form:input path="Email" class="form-control" id="Email" placeholder="Enter your Email"/>
 	    </div>
 
 	    <div class="form-group">
 	      <label for"postTitle">Password</label>
-	      <form:input path="Password" cssClass="form-control" id="Password" placeholder="Create a Password"/>
+	      <form:input path="Password" cssClass="form-control" type="password" id="myInput" onclick="myFunction()" placeholder="Create a Password"/>
 	    </div>
+	    <script>
+	    	function myFunction() {
+	    		var x = document.getElementById("myInput");
+	    		if(x.type == "password") {
+	    			x.type = "text";
+	    		} else {
+	    			x.type = "password";
+	    		}
+	    	}
+	    </script>
 	        
 	    <div class="form-group">
 	    	<form:button class="btn btn-primary defButton" >Submit</form:button>
