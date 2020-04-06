@@ -14,10 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.cupojava.hobbinder.dao.communityDao;
 import com.cupojava.hobbinder.dao.eventDao;
-import com.cupojava.hobbinder.model.Header;
-import com.cupojava.hobbinder.model.HelloWorld; 
+import com.cupojava.hobbinder.model.Header; 
 import com.cupojava.hobbinder.model.Message;
-import com.cupojava.hobbinder.model.User;
 import com.cupojava.hobbinder.model.community;
 import com.cupojava.hobbinder.model.event;
 

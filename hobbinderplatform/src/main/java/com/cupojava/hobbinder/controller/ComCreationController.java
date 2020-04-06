@@ -23,9 +23,7 @@ import com.cupojava.hobbinder.dao.communityDao;
 import com.cupojava.hobbinder.model.Header;
 import com.cupojava.hobbinder.model.community;
 import com.cupojava.hobbinder.model.event;
-import com.cupojava.hobbinder.model.HelloWorld;
 import com.cupojava.hobbinder.model.Message;
-import com.cupojava.hobbinder.model.User;
 
 
 @Controller
