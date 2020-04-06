@@ -25,33 +25,19 @@ import com.cupojava.hobbinder.model.community;
 import com.cupojava.hobbinder.model.event;
 import com.cupojava.hobbinder.model.Message;
 
+
+
 @Controller
-public class ComCreationController {
+public class AboutController {
 	
 	@Autowired
 	communityDao cDao;
 	
 
-	@GetMapping("/communityCreation")
-	public String handler1(@ModelAttribute("community") community Community, Model model) {
-		return "communityCreation";
-	}
-	
-	@PostMapping("/communityCreation")
-	public String handler(@ModelAttribute("community") community Community, Model model) 
-	{
-		Header header = new Header();
-		model.addAttribute("headerTemplate", header);
-		//System.out.println(Community.getName() + " " + Community.getAbout());
-		//System.out.println(Community.getType());
-		cDao.addCommunity(Community.getName(), Community.getAbout(), Community.getType());
-		return "communityCreation";
-	}
-	
-	@RequestMapping("/event")
-	public String event() 
-	{
-		return "eventCreation";
+	@GetMapping("/aboutUs")
+	public String handler1(Model model) {
+		return "aboutUs";
 	}
 	
 }
+

@@ -25,72 +25,8 @@
 </head>
 
 <body>
-	<div class="overlay">
-		<div class="abs-center overlay-card">
-			<div class="close">X</div>
-			<div class="floated overlay-image">
-				<div class="abs-center post-image"></div>
-			</div>
-			<div class="floated overlay-desc">
-				<div class="rela-block desc-title"></div>
-				<div class="rela-block desc-author"></div>
-				<div class="rela-block desc-desc"></div>
-			</div>
-		</div>
-	</div>
-	<div class="nav-bar">
-		<div class="horz-center nav-container">
-			<div class="floated logo">
-				<font color="#f45200">Hobbinder</font>
-			</div>
-			<ul class="floated nav-div nav-links">
-				<li class="rela-inline"><a href="">Home</a></li>
-				<li class="rela-inline"><a href="communityCreation">Community</a></li>
-				<li class="rela-inline"><a href="eventCreation">Events</a></li>
-				<li class="rela-inline"><a href="profile.html">Profile</a></li>
-				<li class="rela-inline"><a href="">About us</a>
-				<li>
-			</ul>
-			<ul class="floated nav-div">
-				<li class="rela-inline menu-toggle"></li>
-			</ul>
-			<div class="floated right nav-div search-container">
-				<div class="rela-inline icon search-icon"></div>
-				<input type="text" placeholder="Search"
-					class="rela-inline nav-search" />
-			</div>
-			<ul class="floated right nav-div sign-div">
-				<li class="rela-inline"><a href=""> <font color="#f45200">Sign-Up</font>
-				</a></li>
-				<li class="rela-inline"><a href=""> <font color="#f45200">Sign-Out</font>
-				</a>/li>
-			</ul>
-			<div class="menu-card">
-				<div class="abs-center menu-background"></div>
-				<div class="menu-content">
-					<ul class="menu-links sub-nav-links">
-						<li class="rela-block">Home</li>
-						<li class="rela-block">Designers</li>
-						<li class="rela-block">Teams</li>
-						<li class="rela-block">Community</li>
-						<li class="rela-block">Jobs</li>
-					</ul>
-					<ul class="menu-links">
-						<li class="rela-block">About</li>
-						<li class="rela-block">Shop</li>
-						<li class="rela-block">Support</li>
-						<li class="rela-block">Tags</li>
-						<li class="rela-block">Contact</li>
-					</ul>
-					<ul class="menu-links sign-links">
-						<li class="rela-block">Sign-Up</li>
-						<li class="rela-block">Sign-Out</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-
+	${headerTemplate. template}
+	
 	<div class="header"></div>
 
 	<div class="row">
