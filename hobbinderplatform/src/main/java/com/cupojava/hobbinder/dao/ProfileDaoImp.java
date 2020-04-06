@@ -43,12 +43,11 @@ public class ProfileDaoImp implements ProfileDao {
 
 		public Profile mapRow(ResultSet rs, int rowNum) throws SQLException {
 			Profile profile = new Profile();
-			Follow follow = new Follow();
+		
 			
 			profile.setFirstName(rs.getString("FirstName"));
 			profile.setLastName(rs.getString("LastName"));
 			profile.setUserName(rs.getString("UserName"));
-			follow.setUserName(rs.getString("UserName"));
 			profile.setDescription(rs.getString("UserDescription"));
 			
 			

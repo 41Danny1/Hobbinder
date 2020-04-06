@@ -12,10 +12,11 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.cupojava.hobbinder.model.Follow;
+import com.cupojava.hobbinder.model.Follower;
 import com.cupojava.hobbinder.model.Post;
 
 @Repository
-public class FollowDaoImp implements FollowDao {
+public class FollowerDaoImp implements FollowerDao {
 
 	NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 	
@@ -25,7 +26,7 @@ public class FollowDaoImp implements FollowDao {
 	}
 
 	
-	public List<Follow> findFollowerByUser(int userID) {
+	public List<Follower> findFollowerByUser(int userID) {
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("id", userID);	
     
@@ -34,29 +35,37 @@ public class FollowDaoImp implements FollowDao {
         		"ON u.UserID = f.followerID where f.userID=:id;";
         
         
-        List<Follow> results = namedParameterJdbcTemplate.query(sql, params, new FollowMapper());
+        List<Follower> results = namedParameterJdbcTemplate.query(sql, params, new FollowMapper());
         
         return results;
 	}
 
 
 	
-	private static final class FollowMapper implements RowMapper<Follow> {
+	private static final class FollowMapper implements RowMapper<Follower> {
 
-		public Follow mapRow(ResultSet rs, int rowNum) throws SQLException {
-			Follow Follow = new Follow();
-			Follow.setUserID(rs.getLong("UserID"));
-			Follow.setFirstName(rs.getString("FirstName"));
-			Follow.setLastName(rs.getString("LastName"));
-			Follow.setUserName(rs.getString("UserName"));
-			Follow.setDescription(rs.getString("UserDescription"));
+		public Follower mapRow(ResultSet rs, int rowNum) throws SQLException {
+			Follower Follow = new Follower();
+			
+			
+			try {
+				Follow.setUserID(rs.getLong("UserID"));
+				Follow.setFirstName(rs.getString("FirstName"));
+				Follow.setLastName(rs.getString("LastName"));
+				Follow.setUserName(rs.getString("UserName"));
+				Follow.setDescription(rs.getString("UserDescription"));
 
+				
+			}
+			
+			catch(Exception e) {}
+			
 			return Follow;
 		}
 	}
 
 
-	public List<Follow> findFollowingByUser(int userID) {
+	public List<Follower> findFollowingByUser(int userID) {
 		// TODO Auto-generated method stub
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("id", userID);	
@@ -66,7 +75,7 @@ public class FollowDaoImp implements FollowDao {
         		"ON u.UserID = f.followingID where f.userID=:id;";
         
         
-        List<Follow> results = namedParameterJdbcTemplate.query(sql, params, new FollowMapper());
+        List<Follower> results = namedParameterJdbcTemplate.query(sql, params, new FollowMapper());
         
         return results;
 	}

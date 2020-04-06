@@ -73,6 +73,27 @@ public class UsersHobbinder {
 	public void setUserDescription(String userDescription) {
 		UserDescription = userDescription;
 	}
-
+	
+	public String myRender(int id, String userName) {
+		String render;
+		
+		render = "  <div class=\"top_follow\">\n" + 
+				"                <p><a href=\"profile?id=" + id + "\"><font color=\"#f45200\"></font>@" + userName + "</font></a></p>\n" + 
+				"                <font color=\"#f45200\">Followers</font></a>/<a href=\"profile_following?id=" + id + "\">Following</a>\n" + 
+				"              </div>";
+		
+		return render;
+	}
+	
+	public String myRender2(int id, String userName) {
+		String render;
+		
+		render = " <div class=\"top_follow\">\n" + 
+				"                <p><a href=\"profile?id=" + id +  "\"><font color=\"#f45200\"></font>@" + userName + "</font></a></p>\n" + 
+				"                <a href=\"profile_followers?id=" + id + "\">Followers</a>/<font color=\"#f45200\">Following</font>\n" + 
+				"              </div>";
+		
+		return render;
+	}
 	
 }
