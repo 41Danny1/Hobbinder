@@ -29,7 +29,7 @@ import com.cupojava.hobbinder.model.User;
 
 
 @Controller
-public class CommunityController {
+public class ComCreationController {
 	
 	@Autowired
 	communityDao cDao;
