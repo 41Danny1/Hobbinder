@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    ${headerTemplate. template}
+    ${headerTemplate.template}
 
     <div class="header">
 

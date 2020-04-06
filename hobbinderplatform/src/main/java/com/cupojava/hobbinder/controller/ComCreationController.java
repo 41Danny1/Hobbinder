@@ -34,6 +34,8 @@ public class ComCreationController {
 
 	@GetMapping("/communityCreation")
 	public String handler1(@ModelAttribute("community") community Community, Model model) {
+		Header header = new Header();
+		model.addAttribute("headerTemplate", header);
 		return "communityCreation";
 	}
 	

@@ -27,6 +27,8 @@ public class EventController {
 
 	@GetMapping("/eventCreation")
 	public String handler1(@ModelAttribute("event") event Event, Model model) {
+		Header header = new Header();
+		model.addAttribute("headerTemplate", header);
 		return "eventCreation";
 	}
 	
