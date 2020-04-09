@@ -44,13 +44,15 @@ public class PostCreationController {
     	return "postCreationLayout";
         }
     
-    @PostMapping("/postcreation")
-    public String handler(@ModelAttribute("post") Post post, Model model) {
+    @PostMapping(value = "/postcreation", params = "id")
+    public String handler2(@ModelAttribute("post") Post post, int id, Model model) {
     	Header header = new Header();
     	model.addAttribute("headerTemplate", header);
     	System.out.println(post.getContent());
-    	postDao.createPost(post.getTitle(), post.getContent(), LocalDate.now().toString(), LocalTime.now().toString(), 1, 1);
-    	return "postCreationLayout";
+    	if(postDao.createPost(post.getTitle(), post.getContent(), LocalDate.now().toString(), LocalTime.now().toString(), id, 1) == 0)
+    		return "postCreationLayout";
+    	else
+    		return "redirect:community?id="+id;
         }
     
 }
