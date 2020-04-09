@@ -67,7 +67,7 @@ public class Post {
 		if(author == null)
 			author = "ID : "+authorID;
 		
-		time = "TIME"; //Hard coded for now
+		//time = "TIME"; //Hard coded for now
 		
 		render = "<div class='row postRow'> <!-- A post -->\n" + 
 				"	    <div class='col-12'>\n" + 

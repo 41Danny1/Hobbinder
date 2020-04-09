@@ -39,7 +39,7 @@ public class PostDaoImpl implements PostDao {
 		Map<String, Object> params = new HashMap<String, Object>();
         params.put("id", communityID);	
         
-        String sql = "SELECT * FROM POSTS WHERE CommunityID=:id";
+        String sql = "SELECT * FROM POSTS WHERE CommunityID=:id ORDER BY PostCreationDate DESC, PostCreationtime DESC";
         List<Post> results = namedParameterJdbcTemplate.query(sql, params, new PostMapper());
         
         return results;
@@ -62,21 +62,23 @@ public class PostDaoImpl implements PostDao {
 			post.setTitle(rs.getString("PostTitle"));
 			post.setContent(rs.getString("PostContent"));
 			post.setDate(rs.getString("PostCreationDate"));
+			post.setTime(rs.getString("PostCreationTime"));
 			post.setCommunityID(rs.getInt("CommunityID"));
 			post.setAuthorID(rs.getInt("UserID"));
 			return post;
 		}
 	}
 
-	public int createPost(String title, String content, String date, int communityID, int authorID) {
+	public int createPost(String title, String content, String date, String time, int communityID, int authorID) {
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("title", title);
 		params.put("content", content);
 		params.put("date", date);
+		params.put("time", time);
 		params.put("cid", communityID);
 		params.put("aid", authorID);
 
-		String sql = "INSERT INTO POSTS(PostTitle, PostContent, PostCreationDate, CommunityID, UserID) VALUES(:title, :content, :date, :cid, :aid)";
+		String sql = "INSERT INTO POSTS(PostTitle, PostContent, PostCreationDate, PostCreationTime, CommunityID, UserID) VALUES(:title, :content, :date, :time, :cid, :aid)";
 //		System.out.println(sql+", "+title+", "+content+", "+date+", "+communityID+", "+authorID);
 //		return 1;
 		

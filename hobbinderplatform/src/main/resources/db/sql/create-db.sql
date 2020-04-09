@@ -48,6 +48,7 @@ CREATE TABLE POSTS (
 	PostTitle VARCHAR(30), 
 	PostContent VARCHAR(300), 
 	PostCreationDate DATE, 
+	PostCreationTime TIME,
 	CommunityID INTEGER, 
 	UserID INTEGER,
 	FOREIGN KEY (CommunityID) REFERENCES COMMUNITIES(CommunityID),

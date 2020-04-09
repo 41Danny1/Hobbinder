@@ -1,6 +1,8 @@
 package com.cupojava.hobbinder.controller;
 
-import java.time.LocalDateTime; 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,7 +49,7 @@ public class PostCreationController {
     	Header header = new Header();
     	model.addAttribute("headerTemplate", header);
     	System.out.println(post.getContent());
-    	postDao.createPost(post.getTitle(), post.getContent(), "2020-03-27", 1, 1); //Hardcoded for now!
+    	postDao.createPost(post.getTitle(), post.getContent(), LocalDate.now().toString(), LocalTime.now().toString(), 1, 1);
     	return "postCreationLayout";
         }
     
