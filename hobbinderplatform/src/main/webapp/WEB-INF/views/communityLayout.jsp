@@ -19,7 +19,9 @@
 	  text-align: right;
       }
       .previewImg{
-	  background-color: #EEEEEE;
+	  //background-color: #EEEEEE;
+      background-position: center;
+      background-size: cover;
 	  width: 48px;
 	  height: 48px;
 	  float: left;

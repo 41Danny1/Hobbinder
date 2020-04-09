@@ -74,8 +74,7 @@ public class Post {
 				"	      <div class='row'> \n" + 
 				"		<div class='col-sm-8'>\n" + 
 				"		  <div>\n" + 
-				"		    <div class='previewImg'>\n" + 
-				"		      IMG\n" + 
+				"		    <div class='previewImg' style='background-image: url(\"resources/images/logo.png\")'>\n" + 
 				"		    </div>\n" + 
 				"		    <a href='#' class='postLinks'><b>\n" + 
 				title+ 
