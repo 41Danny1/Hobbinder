@@ -78,9 +78,9 @@
     <div class="container" style="margin-top: 15px;">
 
       <div class="row">
-	<div class="col-12" style="height: 200px; background-color: #EEEEEE; margin-top: 15px; border-bottom: solid #f45200 5px">
+	<div class="col-12" style="background-image: url('resources/images/sampleCover.jpeg'); background-position: center; background-size: cover; height: 200px; background-color: #EEEEEE; margin-top: 15px; border-bottom: solid #f45200 5px">
 	  <h1 style="position: absolute; bottom: 15px; left: 15px; margin: 0;">
-	    <a href="#" class="defLinks">${community.name}</a>
+	    <a href="#" class="defLinks" style="background-color: black; color: white; padding: 0 5px; border-radius: 5px 10px;">${community.name}</a>
 	  </h1>
 	</div>
       </div>
