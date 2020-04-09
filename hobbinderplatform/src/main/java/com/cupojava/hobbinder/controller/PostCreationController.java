@@ -6,6 +6,8 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.cupojava.hobbinder.dao.PostDao;
 import com.cupojava.hobbinder.model.Header;
 import com.cupojava.hobbinder.model.Post;
+import com.cupojava.hobbinder.model.UsersHobbinder;
 
 @Controller
 public class PostCreationController {
@@ -45,11 +48,14 @@ public class PostCreationController {
         }
     
     @PostMapping(value = "/postcreation", params = "id")
-    public String handler2(@ModelAttribute("post") Post post, int id, Model model) {
+    public String handler2(@ModelAttribute("post") Post post, HttpSession session, int id, Model model) {
     	Header header = new Header();
     	model.addAttribute("headerTemplate", header);
-    	System.out.println(post.getContent());
-    	if(postDao.createPost(post.getTitle(), post.getContent(), LocalDate.now().toString(), LocalTime.now().toString(), id, 1) == 0)
+    	UsersHobbinder user = (UsersHobbinder) session.getAttribute("usersHobbinder");
+    	int uid = 1;
+    	if(user != null)
+    		uid = Integer.parseInt(user.getUserID().toString());
+    	if(postDao.createPost(post.getTitle(), post.getContent(), LocalDate.now().toString(), LocalTime.now().toString(), id, uid) == 0)
     		return "postCreationLayout";
     	else
     		return "redirect:community?id="+id;

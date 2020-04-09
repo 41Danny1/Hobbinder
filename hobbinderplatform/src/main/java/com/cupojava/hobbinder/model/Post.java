@@ -82,7 +82,7 @@ public class Post {
 				"		    +N <!-- # likes -->\n" + 
 				"		    <br>\n" + 
 				"		    <a href='#' class='postLinks'><i class='fas fa-chevron-down'></i></a>\n" + 
-				"		    <a href='#' class='postLinks'>\n" + 
+				"		    <a href='profile?id="+authorID+"' class='postLinks'>\n" + 
 				"		      "+author+"\n" + 
 				"		    </a>\n" + 
 				"		    - "+date+", "+time+"\n" + 
