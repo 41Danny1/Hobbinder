@@ -34,6 +34,14 @@ public class PostCreationController {
 	return "postCreationLayout";
     }
     
+    @GetMapping(value = "/postcreation", params = "id")
+    public String handler(int id, Model model) {
+    	Header header = new Header();
+    	model.addAttribute("headerTemplate", header);
+    	model.addAttribute("community", id);
+    	return "postCreationLayout";
+        }
+    
     @PostMapping("/postcreation")
     public String handler(@ModelAttribute("post") Post post, Model model) {
     	Header header = new Header();

@@ -29,8 +29,8 @@
 	
 	<form:form modelAttribute="post" style="margin-top: 15px;">
 	    <div class="form-group">
-	      <label for"hobby">Hobby</label>
-	      <form:input path="communityID" class="form-control col-4" id="hobby" />
+	      <label for"hobby">Hobby (id for now)</label>
+	      <form:input path="communityID" class="form-control col-4" id="hobby" value="${community}" />
 	    </div>
 	    <div class="form-group">
 	      <label for"postTitle">Post Title</label>

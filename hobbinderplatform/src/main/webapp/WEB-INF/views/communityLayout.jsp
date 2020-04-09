@@ -96,9 +96,9 @@
 	    <a href="#" class="defLinks">Latest</a>
 	  </div>
 	  <div style="float: right; margin: 5px 0 5px 5px;">
-	    <button type="button" class="btn btn-primary defButton" style="padding: 0 15px !important;">
+	    <a href="postcreation?id=${community.id}" class="btn btn-primary defButton" style="padding: 0 15px !important;">
 	      New Post
-	    </button>
+	    </a>
 	  </div>
 	</div>
       </div>
