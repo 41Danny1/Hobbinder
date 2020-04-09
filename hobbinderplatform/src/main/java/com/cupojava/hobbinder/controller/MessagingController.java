@@ -1,6 +1,8 @@
 package com.cupojava.hobbinder.controller;
 
-import java.time.LocalDateTime; 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -66,7 +68,7 @@ public class MessagingController {
 		
 		UsersHobbinder user = (UsersHobbinder)session.getAttribute("usersHobbinder");
 		
-		pmDao.sendMessage(msgToSend.getContent(), Integer.parseInt(user.getUserID().toString()), id, "2020-04-01", "");
+		pmDao.sendMessage(msgToSend.getContent(), Integer.parseInt(user.getUserID().toString()), id, LocalDate.now().toString(), LocalTime.now().toString());
 		
 		return "redirect:/messaging?id="+id;
     }

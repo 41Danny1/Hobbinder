@@ -25,8 +25,8 @@ INSERT INTO HOB_USERS VALUES(null, 'Alfred', 'Riantho', 'Alred4', 'Male', 'Canad
 INSERT INTO HOB_USERS VALUES(null, 'Juliana', 'Takase', 'Juliana11', 'FEMALE', 'Canada', '', 'FROM Brazil', 'juliana@gmail.com', '123456');
 INSERT INTO HOB_USERS VALUES(null, 'Jeff', 'Bezos', 'Jeff55', 'Male', 'Canada', '', 'FROM Amazon', 'jeff@gmail.com', '123456');
 
-INSERT INTO MESSAGES VALUES (NULL, 'testing', '2020-04-1', 1, 2);
-INSERT INTO MESSAGES VALUES (NULL, '123', '2020-04-1', 2, 1);
+INSERT INTO MESSAGES VALUES (NULL, 'testing', '2020-04-1', '20:18', 1, 2);
+INSERT INTO MESSAGES VALUES (NULL, '123', '2020-04-1', '20:18', 2, 1);
 
 INSERT INTO USER_FOLLOWERS
 VALUES (2, 1);

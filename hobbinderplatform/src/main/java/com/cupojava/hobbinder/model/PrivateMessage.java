@@ -48,12 +48,12 @@ public class PrivateMessage {
 	
 	public String renderSend() {
 		return "<div class='msgRight'>"+content+"</div>" + 
-				"	  <div class='msgRightInfo'>20:18</div>";
+				"	  <div class='msgRightInfo'>"+messageTime+"</div>";
 	}
 	
 	public String renderReceive() {
 		return "<div class='msgLeft'>"+content+"</div>" + 
-				"	  <div class='msgLeftInfo'>20:18</div>";
+				"	  <div class='msgLeftInfo'>"+messageTime+"</div>";
 	}
 	
 }

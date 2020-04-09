@@ -41,6 +41,7 @@ public class PrivateMessageDaoImp implements PrivateMessageDao {
 			msg.setMessageID(rs.getInt("MessageID"));
 			msg.setContent(rs.getString("MessageContent"));
 			msg.setMessageDate(rs.getString("MessageDate"));
+			msg.setMessageTime(rs.getString("MessageTime"));
 			msg.setSenderID(rs.getInt("UserID"));
 			msg.setRecipientID(rs.getInt("RecipientID"));
 			return msg;
@@ -55,7 +56,7 @@ public class PrivateMessageDaoImp implements PrivateMessageDao {
 		params.put("date", date);
 		params.put("time", time);
 
-		String sql = "INSERT INTO MESSAGES VALUES(NULL, :content, :date, :senderID, :recipientID)";
+		String sql = "INSERT INTO MESSAGES VALUES(NULL, :content, :date, :time, :senderID, :recipientID)";
 		//INSERT INTO MESSAGES VALUES (NULL, 'testing', '2020-04-1', 1, 2);
 //		System.out.println(sql+", "+title+", "+content+", "+date+", "+communityID+", "+authorID);
 //		return 1;
