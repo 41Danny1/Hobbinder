@@ -18,17 +18,21 @@
            <!-- <script src="profile_script.js"></script> -->
             <!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
             <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="resources/js/feedUtilities.js"></script>
             <style>
                     .lastPost{
 	  text-align: right;
       }
-      .previewImg{
-	  background-color: #EEEEEE;
+	.previewImg{
+	  //background-color: #EEEEEE;
+	    background-position: center;
+	    background-size: cover;
 	  width: 48px;
 	  height: 48px;
 	  float: left;
 	  margin-right: 15px;
-      }
+	    }
       a.postLinks{
 	  color: #212529;
       }
@@ -72,49 +76,11 @@
 
 <body>
 
-        <div class="overlay"><div class="abs-center overlay-card">
-                <div class="close">X</div><div class="floated overlay-image">
-                        <div class="abs-center post-image"></div></div>
-                        <div class="floated overlay-desc">
-                                <div class="rela-block desc-title"></div>
-                                <div class="rela-block desc-author"></div>
-                                <div class="rela-block desc-desc"></div></div></div></div>
-                        <div class="nav-bar">
-                                <div class="horz-center nav-container">
-                                        <div class="floated logo">
-                                            <a href="home.html"><font color="#f45200">Hobbinder</font</a></div>
-                        <ul class="floated nav-div nav-links">
-                                <li class="rela-inline"><a href="home.html">Home</a></li>
-                                <li class="rela-inline"><a href="">Community</a></li>
-                                <li class="rela-inline"><a href="">Events</a></li>
-                                <li class="rela-inline"><a href="profile.html">Profile</a></li>
-                                <li class="rela-inline"><a href="">About us</a></li></ul>
-                                <ul class="floated nav-div"><li class="rela-inline menu-toggle"></li></ul>
-                        <div class="floated right nav-div search-container">
-                                <div class="rela-inline icon search-icon"></div>
-                        <input type="text" placeholder="Search" class="rela-inline nav-search"/></div>
-                        <ul class="floated right nav-div sign-div">
-                        <li class="rela-inline"><a href=""><font color="#f45200">Sign-Up</font></a></li>
-                        <li class="rela-inline"><a href=""><font color="#f45200">Sign-Out</font></a>/li></ul>
-                        <div class="menu-card"><div 
-                        class="abs-center menu-background"></div>
-                        <div class="menu-content">
-                <ul class="menu-links sub-nav-links">
-                        <li class="rela-block">Home</li>
-                        <li class="rela-block">Designers</li>
-                        <li class="rela-block">Teams</li><li 
-        class="rela-block">Community</li><li class="rela-block">Jobs</li></ul>
-        <ul class="menu-links"><li class="rela-block">About</li>
-                <li class="rela-block">Shop</li><li class="rela-block">Support</li>
-                <li class="rela-block">Tags</li><li class="rela-block">Contact</li></ul>
-                <ul class="menu-links sign-links"><li class="rela-block">Sign-Up</li>
-                        <li class="rela-block">Sign-Out</li></ul></div></div></div></div>
-
-        </div>
+        ${headerTemplate.template}
 
         
             <div class="container">
-                    <div class="row"> <!-- The posts -->
+                    <div class="row" style="color: #f45200"> <!-- The posts -->
 	<div class="col-12">
 	  
 	${posts}

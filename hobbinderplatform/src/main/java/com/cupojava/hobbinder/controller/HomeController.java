@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.cupojava.hobbinder.dao.PostDao;
+import com.cupojava.hobbinder.dao.UserHobbinderDAO;
 import com.cupojava.hobbinder.model.Header;
 import com.cupojava.hobbinder.model.Post;
 import com.cupojava.hobbinder.model.UsersHobbinder;
@@ -23,6 +24,9 @@ public class HomeController {
 	
 	@Autowired
 	PostDao postDao;
+	
+	@Autowired
+	UserHobbinderDAO userDao;
 
 	@RequestMapping("/home")
 	public String handler(HttpSession session,Model model) {
@@ -38,12 +42,14 @@ public class HomeController {
 		
 		ArrayList<Integer> list = new ArrayList<Integer>();
 	     for (int i = 0; i < postObjects.size() ; i++) {
+	    	 postObjects.get(i).setAuthor(userDao.findUsersHobbinder(postObjects.get(i).getAuthorID()).get(0).getUserName());
 	          list.add(new Integer(i));
 	     }
 	    Collections.shuffle(list);
 	    
-		for(int i=0; i<postObjects.size(); i++)
+		for(int i=0; i<postObjects.size(); i++) {
 			posts += postObjects.get(list.get(i)).render();
+		}
 		
 		
 		model.addAttribute("posts", posts);
