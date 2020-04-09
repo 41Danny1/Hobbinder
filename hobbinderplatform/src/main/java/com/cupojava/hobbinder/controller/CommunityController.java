@@ -27,6 +27,13 @@ public class CommunityController {
 	
 	@Autowired
 	communityDao comDao;
+	
+	community getErrorCommunity() {
+		community com = new community();
+		com.setName("Uh oh! Looks like this hobby is missing.");
+		com.setAbout("Have you gotten lost?<br>Try returning to your previous page, or report this issue to a Hobbinder admin.");
+		return com;
+	}
 
 	@RequestMapping(value = "/community", params = "id")
 	public String handler(int id, Model model) {
@@ -34,7 +41,13 @@ public class CommunityController {
 		model.addAttribute("headerTemplate", header);
 
 		//Community
-		community com = comDao.findCommunityByID(id);
+		community com;
+		try{
+			com = comDao.findCommunityByID(id);
+		} catch(Exception e) {
+			model.addAttribute("community", getErrorCommunity());
+			return "communityLayout";
+		}
 		model.addAttribute("community", com);
 		
 		//Posts
@@ -52,19 +65,12 @@ public class CommunityController {
 		return "communityLayout";
 	}
 	
-	@RequestMapping(value = "/community") //EDIT LATER TO RETURN AN ERROR PAGE FOR EMPTY COMMUNITY!
+	@RequestMapping(value = "/community")
 	public String handler(Model model) {
 		Header header = new Header();
 		model.addAttribute("headerTemplate", header);
 
-		Post p = postDao.findPostByCode(1);
-
-		String posts = "";
-		List<Post> postObjects = postDao.findPostsByCommunity(0);
-		for(int i=0; i<postObjects.size(); i++)
-			posts += postObjects.get(i).render();
-		
-		model.addAttribute("posts", posts);
+		model.addAttribute("community", getErrorCommunity());
 
 		return "communityLayout";
 	}
