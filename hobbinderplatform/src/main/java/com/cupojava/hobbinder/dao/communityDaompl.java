@@ -11,6 +11,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import com.cupojava.hobbinder.model.Post;
 import com.cupojava.hobbinder.model.community;
 
 
@@ -39,6 +40,29 @@ public class communityDaompl implements communityDao {
 
 		return namedParameterJdbcTemplate.update(sql, params);
 		
+	}
+
+	public community findCommunityByID(int id) {
+		Map<String, Object> params = new HashMap<String, Object>();
+        params.put("id", id);
+        
+		String sql = "SELECT * FROM COMMUNITIES WHERE CommunityID=:id";
+		
+		community result = namedParameterJdbcTemplate.queryForObject(sql, params, new CommunityMapper());
+        
+        return result;
+	}
+	
+	private static final class CommunityMapper implements RowMapper<community> {
+
+		public community mapRow(ResultSet rs, int rowNum) throws SQLException {
+			community c = new community();
+			c.setId(rs.getInt("CommunityID"));
+			c.setName(rs.getString("CommunityName"));
+			c.setAbout(rs.getString("CommunityAbout"));
+			c.setType(rs.getString("CommunityType"));
+			return c;
+		}
 	}
 
 	

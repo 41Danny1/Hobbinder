@@ -1,10 +1,26 @@
 package com.cupojava.hobbinder.model;
 
 public class community {
+	private int id;
 	private String name;
 	private String about;
 	private String content;
 	private String type;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public String getContent() {
+		return content;
+	}
+	
+	public void setContent(String content) {
+		this.content = content;
+	}
 	
 	public String getName() {
 		return name;

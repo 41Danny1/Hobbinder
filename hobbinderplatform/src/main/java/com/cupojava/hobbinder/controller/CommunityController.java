@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.cupojava.hobbinder.model.Header;
 import com.cupojava.hobbinder.model.Post;
+import com.cupojava.hobbinder.model.community;
 import com.cupojava.hobbinder.dao.PostDao;
 import com.cupojava.hobbinder.dao.UserHobbinderDAO;
+import com.cupojava.hobbinder.dao.communityDao;
 
 @Controller
 public class CommunityController {
@@ -22,12 +24,20 @@ public class CommunityController {
 	
 	@Autowired
 	UserHobbinderDAO userDao;
+	
+	@Autowired
+	communityDao comDao;
 
 	@RequestMapping(value = "/community", params = "id")
 	public String handler(int id, Model model) {
 		Header header = new Header();
 		model.addAttribute("headerTemplate", header);
 
+		//Community
+		community com = comDao.findCommunityByID(id);
+		model.addAttribute("community", com);
+		
+		//Posts
 		Post p = postDao.findPostByCode(1);
 
 		String posts = "";

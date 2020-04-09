@@ -78,9 +78,15 @@
       <div class="row">
 	<div class="col-12" style="height: 200px; background-color: #EEEEEE; margin-top: 15px; border-bottom: solid #f45200 5px">
 	  <h1 style="position: absolute; bottom: 15px; left: 15px; margin: 0;">
-	    <a href="#" class="defLinks">HOBBY NAME</a>
+	    <a href="#" class="defLinks">${community.name}</a>
 	  </h1>
 	</div>
+      </div>
+      
+      <div class="row">
+      	<div class="col-12" style="background-color: white; border-radius: 0 0 15px 15px; padding: 15px; margin-bottom: 10px;">
+  			${community.about}
+      	</div>
       </div>
 
       <div class="row">
